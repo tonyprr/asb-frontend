@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es" prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>ASB Contratistas</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <script>document.write('<base href="' + document.location + '" />');</script>
+      
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/menu-nav.css">
+        <link rel="stylesheet" href="css/carousel.css">
+        <link rel="stylesheet" href="css/app.css">
+        <!-- Owl Carousel Assets -->
+        <link href="lib/owl-carousel/owl.carousel.css" rel="stylesheet">
+        <link href="lib/owl-carousel/owl.theme.css" rel="stylesheet">
+        
+        <script src="lib/jquery-2.0.3.min.js"></script>
+        <script src="lib/jquery.sidr.min.js"></script>
+        <script src="lib/bootstrap.min.js"></script>
+        <script src="lib/jquery.backstretch.min.js"></script>
+        <script src="lib/jquery.bootstrap.wizard.min.js"></script>
+        <script src="lib/owl-carousel/owl.carousel.js"></script>
+        
+    </head>
+    <body data-ng-controller="InitController" data-ng-cloak>
+    <script type="text/javascript">
+        //jQuery171 = jQuery.noConflict(true);
+        //function imgUp(obj){	jQuery171(obj).fadeTo("fast",0.5);}
+        //function imgDown(obj){	jQuery171(obj).fadeTo("fast",1);}
+        
+    </script>        
+
+
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Project name</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container content">
+
+        <div data-ui-view id="id_content_view"></div>
+
+           <footer id="footer">
+                <h3>
+                    Powered by Analising
+                </h3>
+            </footer>
+
+    </div><!-- /.container -->
+
+
+    <div id="alertBox" class="alert alert-danger" data-ng-show="error">
+        <button type="button" class="close" data-ng-click="error = null;">&times;</button>
+        <span data-ng-bind="error"></span>
+    </div>
+    
+
+    <script type="text/javascript">
+        //$ = jQuery.noConflict(true);
+        
+        var menuOpened=false;
+        var overlayActive=false;
+        
+        $(function($) {
+          $('#simple-menu').sidr();      
+        });        
+
+        $( window ).resize(function() {
+            //console.log("resize...")
+          if(menuOpened){
+            console.log("toogleando...")
+            //toggleMenu();
+            menuOpened=false;   
+          }
+          if(overlayActive){
+              if($( window ).width()>767){
+                $('.layerOpacity').hide();
+                overlayActive=false;
+              }
+          } 
+        });
+
+        function toggleMenu(){
+            $.sidr('close', 'sidr');    
+        }
+
+        function clickEvent(){
+            menuOpened=!menuOpened;
+        }
+
+        function manageOverlay(){
+            if(!overlayActive)
+                $('.layerOpacity').show();
+            else
+                $('.layerOpacity').hide();
+            overlayActive=!overlayActive;
+        }       
+        
+    </script>
+
+      <!-- In production use:
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+      -->
+      <script src="lib/underscore-min.js"></script>
+      <script src="lib/angular/angular.js"></script>
+      <script src="lib/angular/angular-sanitize.min.js"></script>
+      <!-- <script src="lib/angular/angular-route.js"></script> -->
+      <script src="lib/angular/angular-cookies.min.js"></script>
+      <script src="lib/angular-ui-router/angular-ui-router.min.js"></script>
+      <script src="lib/angular-easyfb.min.js"></script>
+
+      <script src="lib/q.min.js"></script>
+        
+    <!-- Load custom scripts via RequireJS -->
+    <script src="lib/require.js" data-main="js/main"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+    
+    </body>
+    
+</html>
