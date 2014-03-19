@@ -8,7 +8,6 @@ body{height:100%;padding:0;margin:0}
 .text-bold{font-weight:bold !important}
 .container{height:100%;width:100%;padding:0;margin:0}
 #id_content_view{height:101%;width:100%;padding:0;margin:0}
-.gap{height:0}
 .thumbnail{border-radius:8px}
 .padding-thumbs{padding:45px 39px 28px 39px}
 .testing-css{border:1px solid #008000}
@@ -35,7 +34,7 @@ footer h3{position:absolute;font-size:.4em;font-weight:normal;line-height:20px;p
 .content .productos .sin-fondo h4{padding-top:0;margin-top:.1em}
 .content .contenido{height:100%;width:100%;}
 .content .contenido .banner{position:relative;margin-top:1em;overflow:hidden;height:100%;z-index:11;}
-.content .contenido .banner #owl-proyectos{color:#000;background:url("../img/fondo-rell.png") transparent;bottom:10px;padding:3em 1em;opacity:.1;position:absolute;width:100%;}
+.content .contenido .banner #owl-proyectos{color:#000;bottom:10px;padding:2.5em 1em;background:rgba(0,0,0,0.15);position:absolute;width:100%;}
 .content .contenido .banner #owl-proyectos .proy-descrip-thumb{background-color:#808080;padding:1.5em}
 .content .contact{margin:auto;margin-top:1.1em;overflow:hidden;text-align:center;color:#7d6350;font-size:.9em !important;background-color:#eaf9f9;}
 .content .contact .izq,.content .contact .der,.content .contact .centro{display:inline-block;margin:2em;}

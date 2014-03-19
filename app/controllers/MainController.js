@@ -57,7 +57,7 @@ define(['app'], function (app) {
             itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
         });
 
-        owl.trigger('owl.play',1000);
+        owl.trigger('owl.play',3000);
     }
 
     app.register.controller('MainController', ['$scope', '$location', mainController]);
