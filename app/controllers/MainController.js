@@ -20,7 +20,7 @@ define(['app'], function (app) {
 //           $("#banner").backstretch("./img/banner-portada.jpg");
           var $window = $(window).on('resize', function() {
             $('#contenido').height(
-              $(window).height() - $('#header').height() - $('#footer').height() - 20
+              $(window).height() - $('#header').height() - $('#footer').height() - 60
             );    
             /*
             $("#banner").backstretch([
@@ -54,10 +54,19 @@ define(['app'], function (app) {
             itemsDesktop : [1000,3], //5 items between 1000px and 901px
             itemsDesktopSmall : [900,2], // 3 items betweem 900px and 601px
             itemsTablet: [600,2], //2 items between 600 and 0;
-            itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+            itemsMobile : false, // itemsMobile disabled - inherit from itemsTablet option
+            
+            slideSpeed : 800,
+            paginationSpeed : 3000,
+
+            pagination : false,
+            autoPlay : true,
+            
+            autoHeight : true
+
         });
 
-        owl.trigger('owl.play',3000);
+        //owl.trigger('owl.play',3000);
     }
 
     app.register.controller('MainController', ['$scope', '$location', mainController]);
