@@ -1,5 +1,9 @@
 marron = #7d6350
 cian = #EAF9F9
+gris = #656565
+rojo = #A9111D
+gris_claro = #BABABA
+
 
 @font-face {
 	font-family: 'Heldustry';
@@ -122,10 +126,8 @@ footer
 	position absolute
 	margin 0
 	bottom -10px
-	display block
 	z-index 4
 	height 35px
-	right 0px
 	line-height 35px
 	h3
 		position absolute
@@ -137,6 +139,8 @@ footer
 		text-align center
 		width 100%
 		z-index 10
+		a
+			color white !important
 
 .content
 	height 100%
@@ -169,20 +173,33 @@ footer
 			overflow hidden
 			height 100%
 			z-index 11
-			#owl-proyectos
-				color black
-				bottom 10px
-				padding 2.1em 1em
-				background rgba(0, 0, 0, .15)
-				position absolute
-				width 100%
-				.item
-					margin 0 2.6em 0 1em
-					.row
-						background-color grey
-						padding 0
-						.proy-descrip-thumb
-							padding 1.5em
+	#owl-proyectos
+		color black
+		bottom 80px
+		padding 2.1em 1em
+		background rgba(0, 0, 0, .15)
+		position absolute
+		width 100%
+		z-index 99999
+		.item
+			margin 0 2.6em 0 1em
+			padding 0
+			.row
+				background-color gris_claro
+				padding 0
+				.imagen-thumb
+					margin 0 !important
+					padding 0 !important
+					left 0
+					.etiqueta
+						background-color rojo
+						color white
+						padding 0.3em
+						text-align center
+				.proy-descrip-thumb
+					margin 0 !important
+					padding 1.5em
+					text-align center
 
 	.contact
 		margin auto

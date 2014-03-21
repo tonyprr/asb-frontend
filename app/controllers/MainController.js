@@ -18,35 +18,20 @@ define(['app'], function (app) {
             ], {duration: 3000, fade: 800});          
 
 //           $("#banner").backstretch("./img/banner-portada.jpg");
-          var $window = $(window).on('resize', function() {
-            $('#contenido').height(
-              $(window).height() - $('#header').height() - $('#footer').height() - 60
-            );    
-            /*
-            $("#banner").backstretch([
-                "./img/banner-portada.jpg"
-              , "http://dl.dropbox.com/u/515046/www/garfield-interior.jpg"
-              , "./img/banner-about.jpg"
-            ], {duration: 4000, fade: 750});          
-            */
-            //$('#banner').data('backstretch').pause();
-            //$('#banner').data('backstretch').next();
-
-
-          }).trigger('resize'); //on page load      
+            var $window = $(window).on('resize', function() {
+                if ($(window).width() <= 767) {
+                    $('#contenido').height(
+                        ($(window).height() - $('#header').height() - $('#footer').height() - 20) / 2
+                    );
+                } else {
+                    $('#contenido').height(
+                        $(window).height() - $('#header').height() - $('#footer').height() - 45
+                    );
+                }
+                
+            }).trigger('resize'); //on page load      
     	
           //$('#modalLoading').modal('hide');
-
-//            jQuery171(function($) {
-//                jQuery171( "#carousel" ).rcarousel({
-//                    visible: 10,
-//                    step: 1,
-//                    speed: 5000,
-//                    width: 151, 
-//                    height: 170,
-//                    auto: {enabled: true, direction: "next", interval: 0}
-//                });
-//            });
 
         var owl = $("#owl-proyectos");
         owl.owlCarousel({
@@ -54,7 +39,7 @@ define(['app'], function (app) {
             itemsDesktop : [1000,3], //5 items between 1000px and 901px
             itemsDesktopSmall : [900,2], // 3 items betweem 900px and 601px
             itemsTablet: [600,2], //2 items between 600 and 0;
-            itemsMobile : false, // itemsMobile disabled - inherit from itemsTablet option
+            itemsMobile : [500, 1], // itemsMobile disabled - inherit from itemsTablet option
             
             slideSpeed : 800,
             paginationSpeed : 3000,
