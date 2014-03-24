@@ -25,7 +25,11 @@ ul.nav-stacked li a{padding-right:.3em}
 .fondo-blanco{background-color:#fff}
 .fondo-cian{background-color:#eaf9f9 !important}
 .color-active{color:#452d14 !important}
-.menu-principal{position:absolute;margin-top:3em;width:100%;z-index:9999}
+.menu-principal{position:absolute;padding:0 !important;margin-right:0 !important;margin-top:3em;width:102%;z-index:9999;}
+.menu-principal .menu-principal-content{padding-right:0 !important;}
+.menu-principal .menu-principal-content .navbar-collapse{padding:0 !important;}
+.menu-principal .menu-principal-content .navbar-collapse .nav-stacked{text-align:right;}
+.menu-principal .menu-principal-content .navbar-collapse .nav-stacked a{padding-right:3.2em !important}
 footer{background:#000;color:#fff !important;padding:0;text-align:center;width:100%;position:absolute;margin:0;bottom:-10px;z-index:4;height:35px;line-height:35px;}
 footer h3{position:absolute;font-size:.4em;font-weight:normal;line-height:20px;padding-top:.7em;margin:0 auto;text-align:center;width:100%;z-index:10;}
 footer h3 a{color:#fff !important}

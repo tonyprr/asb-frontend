@@ -26,16 +26,9 @@
         
     </head>
     <body data-ng-controller="InitController" data-ng-cloak>
-    <script type="text/javascript">
-        //jQuery171 = jQuery.noConflict(true);
-        //function imgUp(obj){	jQuery171(obj).fadeTo("fast",0.5);}
-        //function imgDown(obj){	jQuery171(obj).fadeTo("fast",1);}
         
-    </script>        
-
-
         <div class="menu-principal row" role="navigation">
-          <div class="col-sm-4 col-sm-offset-8">
+          <div class="col-sm-3 col-sm-offset-9 col-md-2 col-md-offset-10 menu-principal-content">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -46,9 +39,11 @@
             </div>
             <div class="navbar-collapse collapse">
               <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li class="active"><a href="#">INICIO</a></li>
+                <li><a href="#about">EMPRESA</a></li>
+                <li><a href="#about">PROYECTOS</a></li>
+                <li><a href="#about">SERVICIOS</a></li>
+                <li><a href="#contact">CONTÁCTENOS</a></li>
               </ul>
             </div>
           </div>
@@ -76,50 +71,6 @@
         <button type="button" class="close" data-ng-click="error = null;">&times;</button>
         <span data-ng-bind="error"></span>
     </div>
-    
-
-    <script type="text/javascript">
-        //$ = jQuery.noConflict(true);
-        
-        var menuOpened=false;
-        var overlayActive=false;
-        
-        $(function($) {
-          $('#simple-menu').sidr();      
-        });        
-
-        $( window ).resize(function() {
-            //console.log("resize...")
-          if(menuOpened){
-            console.log("toogleando...")
-            //toggleMenu();
-            menuOpened=false;   
-          }
-          if(overlayActive){
-              if($( window ).width()>767){
-                $('.layerOpacity').hide();
-                overlayActive=false;
-              }
-          } 
-        });
-
-        function toggleMenu(){
-            $.sidr('close', 'sidr');    
-        }
-
-        function clickEvent(){
-            menuOpened=!menuOpened;
-        }
-
-        function manageOverlay(){
-            if(!overlayActive)
-                $('.layerOpacity').show();
-            else
-                $('.layerOpacity').hide();
-            overlayActive=!overlayActive;
-        }       
-        
-    </script>
 
       <!-- In production use:
       <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
