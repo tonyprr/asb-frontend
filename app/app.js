@@ -64,15 +64,9 @@ define(['services/routeResolver'], function () {
                     templateUrl: VarsApp.baseUrl + '/views/404.html'
                 })
                 .state('public.home', route.resolve('/', 'Main'))
-                .state('public.carro_compra', route.resolve('/carro-de-compra', 'Carro'))
                 .state('public.contacto', route.resolve('/contacto', 'Contacto'))
-                .state('public.arreglos', route.resolve('/arreglos/{cateId}', 'Productos'))//[/:cateId]
-                .state('public.arreglos_busqueda', route.resolve('/arreglos_busqueda/{query}', 'ProductosBusqueda'))//[/:cateId]
-                .state('public.detalle_producto', route.resolve('/detalle-producto/{prodId}', 'ProductoDetalle'))
-                .state('public.delibouquet', route.resolve('/delibouquet', 'Delibouquet'))
-                .state('public.politicas', route.resolve('/politicas', 'Politicas'))
-                .state('public.delivery', route.resolve('/delivery', 'Delivery'))
-                .state('public.formas_pago', route.resolve('/formas-de-pago', 'FormasPago'));
+                .state('public.empresa', route.resolve('/empresa', 'Empresa'))
+                .state('public.proyectos', route.resolve('/proyectos', 'Proyectos'))
 
             // Anonymous routes
             $stateProvider
