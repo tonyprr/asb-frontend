@@ -5,10 +5,10 @@
     </div>
 </div>
 
-<div id="informacion">
+<div id="informacion" class="">
 	<h2 class="titulo"> EMPRESA </h2>
 	<div class="row">
-		<div class="col-sm-9">
+		<div class="col-xs-12 col-sm-7 col-md-8">
 			<p>
 				Somos una empresa dedicada al negocio inmobiliario en general.<br/>
 				Las actividades que desarrollamos son el diseño y construcción de obras públicas
@@ -18,8 +18,32 @@
 				Nuestras profesionalidad y vasta experiencia...
 			</p>
 		</div>
-		<div  class="col-sm-3">
-			<img data-ng-src="img/empresa-thumb.jpg"/>
+		<div  class="col-xs-12 col-sm-4 col-md-3">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                      </ol>
+
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner">
+                        <div class="item active">
+                            <img data-ng-src="img/empresa-thumb.jpg" class=""/>
+                        </div>
+                        <div class="item">
+                            <img data-ng-src="img/empresa-thumb.jpg" class=""/>
+                        </div>
+                      </div>
+
+                      <!-- Controls -->
+                      <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                      </a>
+                      <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                      </a>
+                    </div>                    
 		</div>
 	</div>
 </div>

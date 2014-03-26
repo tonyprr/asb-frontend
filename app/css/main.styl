@@ -72,7 +72,7 @@ body
 	padding 45px 39px 28px 39px
 
 .testing-css
-	border 1px solid green
+	border 2px solid green
 
 .form-group
 	margin-bottom 0.5em
@@ -122,7 +122,7 @@ ul.nav-stacked
 	margin-left 3em
 	margin-top 1.5em
 	width 100%
-	z-index 9999
+	z-index 10
 	img
 		width 90px
 
@@ -132,7 +132,10 @@ ul.nav-stacked
 	margin-right 0 !important
 	margin-top 1.5em
 	width 102%
-	z-index 9999
+
+.menu-principal
+.iconos-footer
+	z-index 10
 	.iconos-social
 		margin-left 1em
 		margin-bottom 6em
@@ -175,8 +178,13 @@ ul.nav-stacked
 			padding 0 !important
 			.nav-stacked
 				text-align right
-				a
-					padding-right 3.2em !important
+				li
+					a
+						color gris !important
+						padding-right 3.2em !important
+				li.active
+					a
+						color white !important
 
 footer
 	background black
@@ -205,7 +213,8 @@ footer
 
 
 .content
-	height 100%
+	height 98%
+	overflow visible
 
 	.productos
 		margin-top 1.1em
@@ -235,16 +244,16 @@ footer
 
 		.banner
 			position relative
-			margin-top 1em
+			margin-top 0
 			overflow hidden
 			height 100%
-			z-index 11
+			z-index 8
 	#titulo-home
 		position absolute
 		margin-left 1.3em
 		width 100%
 		bottom 42%
-		z-index 999999
+		z-index 9
 		div
 			background rgba(0, 0, 0, .65)
 			color white
@@ -259,7 +268,7 @@ footer
 		padding 2.1em 1em
 		background rgba(0, 0, 0, .15)
 		width 100%
-		z-index 99999
+		z-index 9
 		.item
 			margin 0 2.6em 0 1em
 			padding 0
@@ -281,9 +290,12 @@ footer
 					text-align center
 
 	#informacion
-		margin-left 3.5em
-		margin-right 3em
-		z-index 99999
+		text-align justify
+		color gris
+		padding-left 3.5em
+		padding-right 2em
+		width 100%
+		z-index 9
 		.titulo
 			color rojo
 			font-size 2.1em
@@ -403,6 +415,7 @@ footer
 		img
 			width 60px
 	.content
+		margin-bottom 40px
 		#info-empresa
 			margin-top 0.6em
 			div
