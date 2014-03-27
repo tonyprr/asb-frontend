@@ -2,14 +2,14 @@
 
 define(['app'], function (app) {
 
-    var proyectosController = function ($scope, $rootScope, $stateParams, $filter, $http, $location) {
-        var appTitle = 'Proyectos';
+    var serviciosController = function ($scope, $rootScope, $stateParams, $filter, $http, $location) {
+        var appTitle = 'Servicios';
         $scope.appTitle = appTitle;
         $scope.highlight = function (path) {
             return $location.path().substr(0, path.length) == path;
         };
 
-        $("#banner").backstretch("./img/banner/proyectos.jpg");
+        $("#banner").backstretch("./img/banner/servicios.jpg");
         var $window = $(window).on('resize', function() {
             if ($(window).width() <= 767) {
                             $('#contenido').height(
@@ -20,7 +20,7 @@ define(['app'], function (app) {
                                     $(window).height() - $('#header').height() - $('#footer').height() - 50
                             );    
             }
-            $("#banner").backstretch("./img/banner/proyectos.jpg");
+            $("#banner").backstretch("./img/banner/servicios.jpg");
         }).trigger('resize'); //on page load     
         
         var owl = $("#owl-carousel");
@@ -45,6 +45,6 @@ define(['app'], function (app) {
         
     };
 
-    app.register.controller('ProyectosController', ['$scope', '$rootScope', '$stateParams', '$filter', '$http', '$location', proyectosController]);
+    app.register.controller('ServiciosController', ['$scope', '$rootScope', '$stateParams', '$filter', '$http', '$location', serviciosController]);
     
 });

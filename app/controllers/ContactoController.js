@@ -8,89 +8,104 @@ define(['app'], function (app) {
         $scope.highlight = function (path) {
             return $location.path().substr(0, path.length) == path;
         }
+        $('#map_canvas').height(230);
+//        var $window = $(window).on('resize', function() {
+//                    $('#map_canvas').height(
+//                            $(window).height() - $('#header').height() - $('#footer').height() - $('#contact').height() - 35
+//                    );    
+//        }).trigger('resize'); //on page load      
+        initialize();
 
-		    var $window = $(window).on('resize', function() {
-				$('#map_canvas').height(
-					$(window).height() - $('#header').height() - $('#footer').height() - $('#contact').height() - 35
-				);    
-			}).trigger('resize'); //on page load      
-	  		initialize();
-
-
-function initialize() {
-	var myLatlng = new google.maps.LatLng(-12.1443000,-77.0180000);
-	var mapOptions = {
-		zoom: 17,
-		center: myLatlng,
-		mapTypeId: google.maps.MapTypeId.ROADMAP
-	}
-	var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-
-	var contentString = '<div id="content">'+
-	    '<div id="siteNotice">'+
-	    '</div>'+
-	   // '<h2 id="firstHeading" class="firstHeading">Maido Mitsuharu</h2>'+
-	    '<div id="bodyContent">'+
-		'<div class="foto_mapa"></div>' +
-	    '<p class="text-marron">Amor Amar Jr. Garcia y Garcia 175<br/>' +
-		'	Barranco - Lima, Perú <br/>' +
-		'	Teléfonos: (511)241-8724 / 241 8142 <br/>' +
-		'	Email: <a href="mailto:informes@delibouquet.pe">informes@delibouquet.pe</a> </p>'
-	   '</div>'+
-	    '</div>';
-
-	var infowindow = new google.maps.InfoWindow({
-	    content: contentString
-	});
+        $("#banner").backstretch("./img/banner/contactenos.jpg");
+        var $window = $(window).on('resize', function() {
+            if ($(window).width() <= 767) {
+                            $('#contenido').height(
+                                    ($(window).height() - $('#header').height() - $('#footer').height() - 20) / 2
+                            );    
+            } else {
+                            $('#contenido').height(
+                                    $(window).height() - $('#header').height() - $('#footer').height() - 80
+                            );    
+            }
+            $("#banner").backstretch("./img/banner/contactenos.jpg");
+        }).trigger('resize'); //on page load     
+        
 
 
-	var image = 'img/amor-amar.png';
-	var myLatLng = new google.maps.LatLng(-12.1443000,-77.0180000);
-	var beachMarker = new google.maps.Marker({
-		position: myLatLng,
-		map: map,
-		title:"Delibouquet",
-		animation: google.maps.Animation.DROP,
-		icon: image
-	});
-  
-   
-	google.maps.event.addListener(beachMarker, 'click', function() {
-		infowindow.open(map,beachMarker);
-	});
+        function initialize() {
+                var myLatlng = new google.maps.LatLng(-12.1443000,-77.0180000);
+                var mapOptions = {
+                        zoom: 17,
+                        center: myLatlng,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                }
+                var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
 
-	//google.maps.event.trigger(map, 'resize');
+                var contentString = '<div id="content">'+
+                    '<div id="siteNotice">'+
+                    '</div>'+
+                   // '<h2 id="firstHeading" class="firstHeading">Maido Mitsuharu</h2>'+
+                    '<div id="bodyContent">'+
+                        '<div class="foto_mapa"></div>' +
+                    '<p class="text-marron">Bolognesi 125 Of. 1101<br/>' +
+                        '	Miraflores - Lima, Perú <br/>' +
+                        '	Tele - Fax  241-8724 / 241 8142 <br/>' +
+                        '	Email: <a href="mailto:asbcg@asbcontratistas.com">asbcg@asbcontratistas.com</a> </p>'
+                   '</div>'+
+                    '</div>';
 
-	var styles = [
-	  {
-		featureType: "all",
-	    stylers: [
-	      { hue: "#766452" },
-		  {Weight:3.5},
-	      { saturation: 0 }
-	    ]
-	  },{
-	    featureType: "road",
-	    elementType: "geometry",
-	    stylers: [
-	      { lightness: 90 },
-	      { visibility: "simplified" }
-	    ]
-	  },{
-	    featureType: "road",
-	    elementType: "labels",
-	    stylers: [
-	      { visibility: "on" }
-	    ]
-	  }
-	];
-
-	map.setOptions({styles: styles});
+                var infowindow = new google.maps.InfoWindow({
+                    content: contentString
+                });
 
 
-}
+                var image = 'img/iconos/icono-ubicacion.png';
+                var myLatLng = new google.maps.LatLng(-12.1443000,-77.0180000);
+                var beachMarker = new google.maps.Marker({
+                        position: myLatLng,
+                        map: map,
+                        title:"ASB Contratistas",
+                        animation: google.maps.Animation.DROP,
+                        icon: image
+                });
+
+
+                google.maps.event.addListener(beachMarker, 'click', function() {
+                        infowindow.open(map,beachMarker);
+                });
+
+                //google.maps.event.trigger(map, 'resize');
+
+                var styles = [
+                  {
+                        featureType: "all",
+                    stylers: [
+                      { hue: "#656565" },
+                          {Weight:3.5},
+                      { saturation: 0 }
+                    ]
+                  },{
+                    featureType: "road",
+                    elementType: "geometry",
+                    stylers: [
+                      { lightness: 90 },
+                      { visibility: "simplified" }
+                    ]
+                  },{
+                    featureType: "road",
+                    elementType: "labels",
+                    stylers: [
+                      { visibility: "on" }
+                    ]
+                  }
+                ];
+
+                map.setOptions({styles: styles});
+
+
+        }
 //google.maps.event.addDomListener(window, 'load', initialize);
-google.maps.event.addDomListener(window, 'resize', initialize);
+        google.maps.event.addDomListener(window, 'resize', initialize);
 
         
     };

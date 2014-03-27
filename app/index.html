@@ -49,6 +49,7 @@
                         </a>
                     </div>
                 </div>
+                <br/>
             </div>
 
           <div class="col-sm-3 col-sm-offset-9 col-md-2 col-md-offset-10 menu-principal-content">
@@ -62,11 +63,16 @@
             </div>
             <div class="navbar-collapse collapse">
               <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a ui-sref="public.home">INICIO</a></li>
-                <li><a ui-sref="public.empresa">EMPRESA</a></li>
-                <li><a ui-sref="public.proyectos">PROYECTOS</a></li>
-                <li><a ui-sref="public.servicios">SERVICIOS</a></li>
-                <li><a ui-sref="public.contacto">CONTÁCTENOS</a></li>
+                <li ng-class="{'active' : isActiveMenu('/')}"
+                    ng-click="selectMenu('/')"><a ui-sref="public.home">INICIO</a></li>
+                <li ng-class="{'active' : isActiveMenu('/empresa')}"
+                    ng-click="selectMenu('/empresa')"><a ui-sref="public.empresa">EMPRESA</a></li>
+                <li ng-class="{'active' : isActiveMenu('/proyectos')}"
+                    ng-click="selectMenu('/proyectos')"><a ui-sref="public.proyectos">PROYECTOS</a></li>
+                <li ng-class="{'active' : isActiveMenu('/servicios')}"
+                    ng-click="selectMenu('/servicios')"><a ui-sref="public.servicios">SERVICIOS</a></li>
+                <li ng-class="{'active' : isActiveMenu('/contacto')}"
+                    ng-click="selectMenu('/contacto')"><a ui-sref="public.contacto">CONTÁCTENOS</a></li>
               </ul>
             </div>
           </div>
@@ -78,34 +84,8 @@
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <div class="container content">
-
         <div data-ui-view id="id_content_view"></div>
-        
-    <div class="iconos-footer row visible-xs">
-        <div class="col-xs-12 text-center">Síguenos en:</div>
-        <div class="col-xs-12 center-block">
-            <div class="iconos-social center-block">
-                <div class="logo-fb">
-                    <a target="_blank" href="https://www.facebook.com/asb">
-                        <div class="logo-fb-img"></div>
-                    </a>
-                </div>
-                <div class="logo-twitter">
-                    <a target="_blank" href="https://www.facebook.com/asb">
-                        <div class="logo-twitter-img"></div>
-                    </a>
-                </div>
-                <div class="logo-youtube">
-                    <a target="_blank" href="https://www.facebook.com/asb">
-                        <div class="logo-youtube-img"></div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-        
     </div><!-- /.container -->
-
     <footer id="footer">
         <h3>
             <a href="http://analising.com" target="_blank">POWER BY ANALISING.COM</a>

@@ -77,10 +77,6 @@ body
 .form-group
 	margin-bottom 0.5em
 
-.btn
-	color white
-	background-color marron
-	border-radius 0
 
 .sin-padding
 	padding 0 !important
@@ -91,6 +87,8 @@ body
 .sin-borde-top
 	border-top 0
 
+.padding-content
+	padding 0 60px
 .text-left
 	text-align left !important
 
@@ -104,7 +102,7 @@ body
 ul.nav-stacked
 	li
 		a
-			padding-right 0.3em
+			padding 0.4em 0.3em 0.3em 0.1em
 
 .text-marron
 	color marron !important
@@ -126,6 +124,24 @@ ul.nav-stacked
 	img
 		width 90px
 
+.prev
+	background-image url(../img/iconos/flechas.png)
+	border-radius 0
+	height 57px
+	cursor pointer
+	background-position bottom left
+	margin-top 7em
+	width 40px
+
+.next
+	background-image url(../img/iconos/flechas.png)
+	border-radius 0
+	height 57px
+	cursor pointer
+	background-position bottom right
+	margin-top 7em
+	width 40px
+
 .menu-principal
 	position absolute
 	padding 0 !important
@@ -136,9 +152,11 @@ ul.nav-stacked
 .menu-principal
 .iconos-footer
 	z-index 10
+	margin-top 1em
 	.iconos-social
-		margin-left 1em
-		margin-bottom 6em
+		margin 1em auto 5em auto
+		width 170px
+		float none
 		.logo-fb
 			float left
 			margin-right 0.7em
@@ -216,23 +234,6 @@ footer
 	height 98%
 	overflow visible
 
-	.productos
-		margin-top 1.1em
-		margin-bottom 0
-		text-size 1em
-		background-color cian
-		height 101%
-		.subcontenido
-			padding 1.5em 16% 0 16%
-			background-color cian
-			height auto
-		.sin-fondo
-			background-color transparent
-			box-shadow none
-			h4
-				padding-top 0
-				margin-top 0.1em
-				
 	#info-empresa
 		div
 			line-height 26px
@@ -295,32 +296,25 @@ footer
 		width 100%
 		z-index 9
 		.item
-			margin 1em 1em
+			margin 0 1.5em
 			padding 0
-			.row
-				background-color gris_claro
-				padding 0
-				.imagen-thumb
-					margin 0 !important
-					padding 0 !important
-					left 0
-					.etiqueta
-						background-color rojo
-						color white
-						padding 0.3em
-						text-align center
+			border 16px gris_claro solid
+			.etiqueta
+				color gris
+				padding 0.3em
+				text-align center
 
-	#informacion
+	#informacion-empresa
+	#informacion-proyectos
+	#informacion-contactos
 		text-align justify
 		color gris
-		padding-left 3.5em
-		padding-right 2em
+		overflow visible
 		width 100%
 		z-index 9
 		.titulo
 			color rojo
-			font-size 2.1em
-			margin-bottom 0.9em
+			font-size 2.9em
 
 	.contact
 		margin auto
@@ -463,9 +457,15 @@ footer
 
 @media screen and (min-width: 768px)
 	.content
-		#informacion
+		#informacion-empresa
 			position absolute
 			top 42%
+		#informacion-proyectos
+			position absolute
+			top 39%
+		#informacion-contactos
+			position absolute
+			top 29%
 		#owl-proyectos
 			position absolute
 			bottom 80px

@@ -1,44 +1,71 @@
-<div class="contact" id="contact" ng-controller="ContactoController">
+<div class="contenido" id="contenido" 
+	data-ng-controller="ContactoController">
+    <div class="banner row" id="banner">
 
-		<div class="izq hidden-xs">
-			<h2>Ubicación</h2>
-			<p class="direccion">Amor Amar Jr. Garcia y Garcia 175<br/>
-				Barranco - Lima, Perú</p>
-			<h2>Informes</h2>	
-			<p>Email: informes@delibouquet.pe</p>
-		</div>
-		<div class="spacer hidden-xs">
-
-			<span> </span>
-		</div>
-		<div class="der hidden-xs">
-			<h2>Pedidos</h2>
-			<p>(511)241-8724 / 241 8142
-				<br/>&nbsp;</p>
-			<h2>Horarios</h2>
-			<p>lunes a domingo de 10:00am a 8:00pm</p>
-		</div>
-
-
- 	<div class="centro visible-xs">		
-		<h2>Ubicación</h2>
-		<div class="direccion">Amor Amar Jr. Garcia y Garcia 175<br/>
-			Barranco - Lima, Perú</div>
-		<h2>Informes</h2>	
-		<p>Email: informes@delibouquet.pe</p>
-
-		<h2>Pedidos</h2>
-		<p>(511)241-8724 / 241 8142</p>
-		<h2>Horarios</h2>
-		<p>lunes a domingo de 10:00am a 8:00pm</p>
-	</div>		
-
+    </div>
 </div>
 
+<div id="informacion-contactos" class="">
+	<h2 class="titulo padding-content"> CONTÁCTENOS </h2>
+        <br/>
+        <div class="padding-content">
+            <div class="row">
+                <div class="col-md-8">
+                    <p>ASB CONTRATISTAS GENERALES E.I.R.L.</p> 
+                    <p>Bolognesi 125 Of. 1101</p> 
+                    <p>Bolognesi 125 Of. 1101</p> 
+                    <p>Bolognesi 125 Of. 1101</p> 
+                    <p>Bolognesi 125 Of. 1101</p> 
+                </div>
+                <div class="col-md-4">
 
-	<div class="contact-map">
-		<div id="map_canvas">
+                    <form class="form-horizontal" role="form">
+                      <div class="form-group">
+                        <label for="inputNombre" class="col-sm-3 control-label">Nombre:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control input-sm" id="inputNombre" placeholder="Nombre">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputEmail" class="col-sm-3 control-label">Email:</label>
+                        <div class="col-sm-9">
+                          <input type="email" class="form-control input-sm" id="inputEmail" placeholder="Email">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputEmpresa" class="col-sm-3 control-label">Empresa:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control input-sm" id="inputEmpresa" placeholder="Empresa">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputTelefono" class="col-sm-3 control-label">Teléfono:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control input-sm" id="inputTelefono" placeholder="Teléfono">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputComentario" class="col-sm-3 control-label">Comentario:</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control input-sm" id="inputComentario" rows="3"></textarea>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-offset-3 col-sm-9">
+                          <button type="submit" class="btn btn-default">Enviar</button>
+                        </div>
+                      </div>
+                    </form>
 
-		</div>
-	</div>
+                </div>
+            </div>
+        </div>
+
+    <div class="contact-map">
+            <div id="map_canvas">
+
+            </div>
+    </div>
+        
+</div>
 
