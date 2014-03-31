@@ -24,7 +24,7 @@ define(['app'], function (app) {
                             );    
             } else {
                             $('#contenido').height(
-                                    $(window).height() - $('#header').height() - $('#footer').height() - 80
+                                    $(window).height() - $('#header').height() - $('#footer').height() - 120
                             );    
             }
             $("#banner").backstretch("./img/banner/contactenos.jpg");

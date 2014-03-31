@@ -58,12 +58,7 @@ body
 	width 100%
 	padding 0
 	margin 0
-
-#id_content_view
-	height 101%
-	width 100%
-	padding 0
-	margin 0
+	overflow auto
 
 .thumbnail
 	border-radius 8px
@@ -130,7 +125,7 @@ ul.nav-stacked
 	height 57px
 	cursor pointer
 	background-position bottom left
-	margin-top 7em
+	margin-top 5em
 	width 40px
 
 .next
@@ -139,7 +134,7 @@ ul.nav-stacked
 	height 57px
 	cursor pointer
 	background-position bottom right
-	margin-top 7em
+	margin-top 5em
 	width 40px
 
 .menu-principal
@@ -153,6 +148,7 @@ ul.nav-stacked
 	padding 0.2em 0
 	position absolute
 	top 0
+	margin 0
 	width 100%
 	z-index 20
 	#logo-small
@@ -162,7 +158,7 @@ ul.nav-stacked
 
 .menu-principal
 .iconos-footer
-	z-index 10
+	z-index 20
 	margin-top 1em
 	.iconos-social
 		margin 1em auto 5em auto
@@ -244,6 +240,9 @@ footer
 	overflow visible
 
 	#info-empresa
+		margin-top .5em
+		position relative
+		z-index 20
 		div
 			line-height 26px
 			padding 0.6em
@@ -251,19 +250,18 @@ footer
 	.contenido
 		height 100%
 		width 100%
-
 		.banner
-			position relative
+			position absolute
 			margin-left 1.7em
 			margin-top 0
 			overflow hidden
-			height 100%
+			width 96%
+			height 97%
 			z-index 8
 	#titulo-home
 		position absolute
-		margin-left 1.7em
 		width 100%
-		bottom 42%
+		top 47%
 		z-index 9
 		div
 			background rgba(0, 0, 0, .65)
@@ -276,9 +274,10 @@ footer
 
 	#owl-proyectos
 		color black
+		margin-bottom 1em
 		padding 2.1em 1.7em 2.1em 1.2em
 		background rgba(0, 0, 0, .15)
-		width 100%
+		position relative
 		z-index 9
 		.item
 			margin 0 2.6em 0 1em
@@ -300,13 +299,13 @@ footer
 					padding 1.5em
 					text-align center
 
-	#owl-carousel
+	#lista-proyectos
 		color black
-		padding 2em 1em
+		padding 2em 12%
 		width 100%
 		z-index 9
 		.item
-			margin 0 1.5em
+			margin 0.5em .2em
 			padding 0
 			border 16px gris_claro solid
 			.etiqueta
@@ -314,17 +313,39 @@ footer
 				padding 0.3em
 				text-align center
 
+	#lista-servicios
+		color black
+		padding 2em 0
+		width 100%
+		z-index 9
+		.item
+			margin 0 1em
+			padding 0
+			border 16px gris_claro solid
+			.etiqueta
+				color gris
+				padding 0.3em
+				text-align center
+
+	#informacion-inicio
 	#informacion-empresa
 	#informacion-proyectos
+	#informacion-servicios
 	#informacion-contactos
+		background-color transparent
 		text-align justify
 		color gris
-		overflow visible
-		width 100%
+		padding 0 60px
+		position relative
+		overflow auto
 		z-index 9
 		.titulo
 			color rojo
 			font-size 2.9em
+
+	#informacion-inicio
+	#informacion-contactos
+		padding 0
 
 	.contact
 		margin auto
@@ -334,58 +355,6 @@ footer
 		color marron
 		font-size 0.9em !important
 		background-color cian
-		.izq 
-		.der
-		.centro
-			display inline-block
-			margin 2em
-			p
-				font-family "mangalb"
-			h2
-				font-size 1.7em
-				font-weight normal
-				font-family "Heldustry"
-
-		.izq
-			text-align right
-			margin-right 0
-			.direccion
-				padding-right 38px
-				background-image url(../img/amor-amar.png)
-				background-repeat no-repeat
-				background-position right
-
-		.der
-			text-align left	
-			border-left solid 2px marron
-			padding-left 2em
-
-		.spacer		
-			background marron
-			display inline-block
-			height 200px
-		
-		.centro
-			text-align left
-			padding 7px 15px 9px 22px
-			margin 0
-			font-size 1em
-			line-height 1.5em
-			h2
-				padding 4px 0 0 0
-				margin 0
-				line-height 1.6em
-			p
-				padding 0
-				margin 0
-			.direccion
-				display inline-block
-				font-family "mangalb"
-				padding-right 4em
-				background-image url(../img/amor-amar.png)
-				background-repeat no-repeat
-				background-position right
-
 
 
 .simple-menu
@@ -393,6 +362,7 @@ footer
 	position absolute
 	margin-top 0.2em
 	margin-left 0.2em
+	z-index 110
 
 .overlay-menu
 	display none
@@ -434,6 +404,7 @@ footer
 		padding 23px 18px
 	nav
 		display none !important
+
 	.content
 		margin-bottom 40px
 		#info-empresa
@@ -447,36 +418,73 @@ footer
 					color black
 
 		#titulo-home
-			bottom 59%
+			margin-left 0.1em
+			position relative
+			top 50%
 			div
 				padding 0 1em 0.5em 1.1em
 				h2
 					font-size 1.7em
 				p
 					font-size 1em
+		#lista-proyectos
+			padding 0.2em 0.5em
+			.col-xs-6
+				padding-right 0
+				margin-right 0
+				.item
+					margin 0.5em 0
+
 
 		.contenido
 			.banner
+				position relative
+				margin-top 2em
 				margin-left 0
+				width 100%
 		#owl-proyectos
 			margin-top 1.5em
-			position relative
+
+		#informacion-inicio
+		#informacion-empresa
+		#informacion-proyectos
+		#informacion-servicios
+			padding 0 22px
+		#informacion-inicio
+			padding 0
+			top 0
+		#informacion-empresa
+			top -4em
+		#informacion-proyectos
+			padding 0
+			top -8em
+			h2
+				margin-left 0.4em
+			.nav-pills
+				font-size 0.8em !important
+		#informacion-servicios
+			top -8em
+		#informacion-contactos
+			padding 0
+			top -8em
+			.contacto-panel
+				padding 0 1.3em
 	
 
 @media screen and (min-width: 768px)
 	.content
+		#informacion-inicio
+			top 62%
 		#informacion-empresa
-			position absolute
-			top 42%
+			top 44%
 		#informacion-proyectos
-			position absolute
 			top 39%
+		#informacion-servicios
+			top 42%
 		#informacion-contactos
-			position absolute
-			top 29%
-		#owl-proyectos
-			position absolute
-			bottom 80px
+			top 38%
+			.contacto-panel
+				padding 2em 3em 0 4.4em
 
 
 //@media screen and (min-width: 1024px)

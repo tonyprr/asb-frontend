@@ -20,12 +20,12 @@ define(['app'], function (app) {
 //           $("#banner").backstretch("./img/banner-portada.jpg");
             var $window = $(window).on('resize', function() {
                 if ($(window).width() <= 767) {
-                    $('#contenido').height(
-                        ($(window).height() - $('#header').height() - $('#footer').height() - 20) / 2
+                    $('#banner').height(
+                        ($(window).height() - $('#header').height() - $('#footer').height() - 90) / 2
                     );
                 } else {
-                    $('#contenido').height(
-                        $(window).height() - $('#header').height() - $('#footer').height() - 45
+                    $('#banner').height(
+                        $(window).height() - $('#header').height() - $('#footer').height() - 40
                     );
                 }
                 

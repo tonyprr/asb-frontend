@@ -3,56 +3,63 @@
     <div class="banner row" id="banner">
 
     </div>
-</div>
+    
+    <div id="informacion-empresa" class="">
+            <h2 class="titulo "> EMPRESA </h2>
+            <div class="row">
+                    <div class="col-xs-12 col-sm-7 col-md-7">
+                            <p>
+                                    Somos una empresa dedicada al negocio inmobiliario en general.<br/>
+                                    Las actividades que desarrollamos son el diseño y construcción de obras públicas y privadas de todo tipo y la compra y venta de inmuebles.
+                                    <br/>
+                             </p>
+                            <p>
+                                    Nuestras profesionalidad y vasta experiencia acumulada a lo largo de 20 años dedicados a la construcción aportan una excelente calidad a nuestras edificaciones, obteniendo la total satisfacción de nuestros clientes. Esto nos obliga a estar en vanguardia, aplicando las últimas innovaciones del sector.
+                            </p>
+                    </div>
+                    <div class="col-md-1 visible-md visible-lg"></div>
+                    
+                    <div  class="col-xs-12 col-sm-4 col-md-3">
+                        <div id="carousel-empresa" class="carousel slide" data-ride="carousel">
+                          <!-- Indicators -->
+                          <ol class="carousel-indicators">
+                            <li data-target="#carousel-empresa" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-empresa" data-slide-to="1"></li>
+                          </ol>
 
-<div id="informacion-empresa" class="padding-content">
-	<h2 class="titulo "> EMPRESA </h2>
-	<div class="row">
-		<div class="col-xs-12 col-sm-7 col-md-8">
-			<p>
-				Somos una empresa dedicada al negocio inmobiliario en general.<br/>
-				Las actividades que desarrollamos son el diseño y construcción de obras públicas y privadas de todo tipo y la compra y venta de inmuebles.
-				<br/>
-			 </p>
-			<p>
-				Nuestras profesionalidad y vasta experiencia acumulada a lo largo de 20 años dedicados a la construcción aportan una excelente calidad a nuestras edificaciones, obteniendo la total satisfacción de nuestros clientes. Esto nos obliga a estar en vanguardia, aplicando las últimas innovaciones del sector.
-			</p>
-		</div>
-		<div  class="col-xs-12 col-sm-4 col-md-3">
-                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                      <!-- Indicators -->
-                      <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                      </ol>
+                          <!-- Wrapper for slides -->
+                          <div class="carousel-inner">
+                            <div class="item active">
+                                <img data-ng-src="img/empresa-thumb.jpg" class="slide"/>
+                            </div>
+                            <div class="item">
+                                <img data-ng-src="img/empresa-thumb.jpg" class="slide"/>
+                            </div>
+                          </div>
 
-                      <!-- Wrapper for slides -->
-                      <div class="carousel-inner">
-                        <div class="item active">
-                            <img data-ng-src="img/empresa-thumb.jpg" class=""/>
-                        </div>
-                        <div class="item">
-                            <img data-ng-src="img/empresa-thumb.jpg" class=""/>
-                        </div>
-                      </div>
+                          <!-- Controls -->
+                          <a class="left carousel-control" href="#carousel-empresa" data-slide="prev">
+                              <img data-ng-src="img/iconos/flechas-small-izquierda.png"/>
+                          </a>
+                          <a class="right carousel-control" href="#carousel-empresa" data-slide="next">
+                              <img data-ng-src="img/iconos/flechas-small-derecha.png"/>
+                          </a>
+                        </div>                    
+                    </div>
+            </div>
+            <div class="hidden-xs">
+                <br/><br/><br/><br/>
+            </div>
+            <div ng-include="'views/infoEmpresa.html'">
 
-                      <!-- Controls -->
-                      <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                      </a>
-                      <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                      </a>
-                    </div>                    
-		</div>
-	</div>
-</div>
+            </div>
 
-    <div ng-include="'views/infoEmpresa.html'">
+            <div ng-include="'views/social.html'">
 
+            </div>
     </div>
 
-<div ng-include="'views/social.html'">
+
     
 </div>
 

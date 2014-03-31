@@ -31,14 +31,44 @@
 
         <div class="menu-principal-movil row visible-xs">
             <div class="col-xs-2">
-                &nbsp;
             </div>
             <div  id="logo-small" class="col-xs-8 text-center">
-                <img data-ng-src="img/iconos/logotipo-asb.png" />
+                <img data-ng-src="img/iconos/logo-asb-movil.png" />
             </div>
-            <div class="col-xs-2 text-right">
-                |||
+            <div class="col-xs-2">
+                <div class="text-right right">
+                    <a id="simple-menu" href="#sidr" class="right" onclick="clickEvent();">
+                        <img src="img/iconos/barras_mobil.png">
+                    </a>
+                </div>
             </div>
+        </div>
+
+        
+        <div id="sidr" class="nav-mobile" >   
+          <ul>
+            <li ng-class="{'active' : isActiveMenu('/')}"
+                ng-click="selectMenu('/');" onclick="toggleMenu();" ui-sref="public.home">
+                <a href="">INICIO</a>
+            </li>
+
+            <li ng-class="{'active' : isActiveMenu('/empresa')}"
+                ng-click="selectMenu('/empresa')" onclick="toggleMenu();" ui-sref="public.empresa">
+                <a href="">EMPRESA</a>
+            </li>
+            <li ng-class="{'active' : isActiveMenu('/proyectos')}"
+                ng-click="selectMenu('/proyectos')" onclick="toggleMenu();" ui-sref="public.proyectos">
+                <a href="">PROYECTOS</a>
+            </li>
+            <li ng-class="{'active' : isActiveMenu('/servicios')}"
+                ng-click="selectMenu('/servicios')" onclick="toggleMenu();" ui-sref="public.servicios">
+                <a href="">SERVICIOS</a>
+            </li>
+            <li ng-class="{'active' : isActiveMenu('/contacto')}"
+                ng-click="selectMenu('/contacto')" onclick="toggleMenu();" ui-sref="public.contacto">
+                <a href="">CONTÁCTENOS</a>
+            </li>
+          </ul>
         </div>
         
         <div class="menu-principal row hidden-xs">
@@ -85,8 +115,8 @@
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <div class="container content">
-        <div data-ui-view id="id_content_view"></div>
+    <div class="container content" data-ui-view>
+        
     </div><!-- /.container -->
     <footer id="footer">
         <h3>
@@ -100,6 +130,30 @@
         <span data-ng-bind="error"></span>
     </div>
 
+    <script type="text/javascript">
+        var menuOpened=false;
+        $(document).ready(function() {
+          $('#simple-menu').sidr({
+//                name: 'sidr-right',
+                side: 'right'
+          });      
+        });
+
+        $( window ).resize(function() {
+            if($( window ).width() < 767){
+                $.sidr('close', 'sidr');
+            }
+        });
+
+        function toggleMenu(){
+            $.sidr('close', 'sidr');    
+        }
+
+        function clickEvent(){
+            menuOpened=!menuOpened;
+        }
+
+    </script>
       <!-- In production use:
       <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
       -->

@@ -23,24 +23,24 @@ define(['app'], function (app) {
             $("#banner").backstretch("./img/banner/proyectos.jpg");
         }).trigger('resize'); //on page load     
         
-        var owl = $("#owl-carousel");
-        owl.owlCarousel({
-            items : 4, //10 items above 1000px browser width
-            itemsDesktop : [1000,3], //5 items between 1000px and 901px
-            itemsDesktopSmall : [900,2], // 3 items betweem 900px and 601px
-            itemsTablet: [600,2], //2 items between 600 and 0;
-            itemsMobile : [500, 1], // itemsMobile disabled - inherit from itemsTablet option
-            
-            slideSpeed : 800,
-            paginationSpeed : 3000,
-
-            pagination : false,
-            autoPlay : true,
-            
-            autoHeight : true
-
-        });
-
+//        var owl = $("#owl-carousel");
+//        owl.owlCarousel({
+//            items : 4, //10 items above 1000px browser width
+//            itemsDesktop : [1000,3], //5 items between 1000px and 901px
+//            itemsDesktopSmall : [900,2], // 3 items betweem 900px and 601px
+//            itemsTablet: [600,2], //2 items between 600 and 0;
+//            itemsMobile : [500, 1], // itemsMobile disabled - inherit from itemsTablet option
+//            
+//            slideSpeed : 800,
+//            paginationSpeed : 3000,
+//
+//            pagination : false,
+//            autoPlay : true,
+//            
+//            autoHeight : true
+//
+//        });
+//
         
         
     };
