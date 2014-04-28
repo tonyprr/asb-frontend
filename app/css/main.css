@@ -53,12 +53,12 @@ footer h3 a{color:#fff !important}
 .content #info-empresa{margin-top:.5em;position:relative;z-index:20;}
 .content #info-empresa div{line-height:26px;padding:.6em}
 .content .contenido{height:100%;width:100%;}
-.content .contenido .banner{position:absolute;margin-left:1.7em;margin-top:0;overflow:hidden;width:96%;height:97%;z-index:8}
+.content .contenido .banner{position:relative;margin-left:1.7em;margin-top:0;overflow:hidden;width:96%;height:97%;z-index:8}
 .content #titulo-home{position:absolute;width:100%;top:47%;z-index:9;}
 .content #titulo-home div{background:rgba(0,0,0,0.65);color:#fff;padding:0 1em .5em 2.1em;}
 .content #titulo-home div h2{font-size:2.7em}
 .content #titulo-home div p{font-size:1.1em}
-.content #owl-proyectos{color:#000;margin-bottom:1em;padding:2.1em 1.7em 2.1em 1.2em;background:rgba(0,0,0,0.15);position:relative;z-index:9;}
+.content #owl-proyectos{color:#000;margin-bottom:1em;padding:2em 1.7em 2em 1.2em;background:rgba(0,0,0,0.15);position:relative;z-index:9;}
 .content #owl-proyectos .item{margin:0 2.6em 0 1em;padding:0;}
 .content #owl-proyectos .item .row{background-color:#bababa;padding:0;}
 .content #owl-proyectos .item .row .imagen-thumb{margin:0 !important;padding:0 !important;left:0;}
@@ -108,10 +108,18 @@ nav{display:none !important}
 .content #informacion-servicios{top:-8em}
 .content #informacion-contactos{padding:0;top:-8em;}
 .content #informacion-contactos .contacto-panel{padding:0 1.3em}
-}@media screen and (min-width: 768px){.content #informacion-inicio{top:62%}
-.content #informacion-empresa{top:44%}
-.content #informacion-proyectos{top:39%}
-.content #informacion-servicios{top:42%}
-.content #informacion-contactos{top:38%;}
+}@media screen and (min-width: 768px){.content #informacion-inicio{top:-14.5em}
+.content #informacion-empresa{top:-22em}
+.content #informacion-proyectos{top:-23em}
+.content #informacion-servicios{top:-24em}
+.content #informacion-contactos{top:-24em;}
 .content #informacion-contactos .contacto-panel{padding:2em 3em 0 4.4em}
+}@media screen and (min-width: 1440px){.content .contenido #titulo-home{top:47%}
+.content #informacion-inicio{top:-15.5em}
+.content #informacion-empresa{top:-23em}
+.content #informacion-proyectos{top:-24em}
+.content #informacion-servicios{top:-25em}
+.content #informacion-contactos{top:-25em}
+.content #owl-proyectos{margin-bottom:3.3em;}
+.content #owl-proyectos .item .row .imagen-thumb img,.content #owl-proyectos .item .row .imagen-thumb .etiqueta{width:105px}
 }

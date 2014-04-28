@@ -15,7 +15,7 @@ define(['app'], function (app) {
               , "./img/banner/3.jpg"
               , "./img/banner/4.jpg"
               , "./img/banner/5.jpg"
-            ], {duration: 3000, fade: 800});          
+            ], {duration: 3000, fade: 0});          
 
 //           $("#banner").backstretch("./img/banner-portada.jpg");
             var $window = $(window).on('resize', function() {
@@ -25,7 +25,7 @@ define(['app'], function (app) {
                     );
                 } else {
                     $('#banner').height(
-                        $(window).height() - $('#header').height() - $('#footer').height() - 40
+                        $(window).height() - $('#header').height() - $('#footer').height() - 47
                     );
                 }
                 

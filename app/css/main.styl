@@ -251,7 +251,8 @@ footer
 		height 100%
 		width 100%
 		.banner
-			position absolute
+			/*border 1px solid green*/
+			position relative
 			margin-left 1.7em
 			margin-top 0
 			overflow hidden
@@ -275,7 +276,7 @@ footer
 	#owl-proyectos
 		color black
 		margin-bottom 1em
-		padding 2.1em 1.7em 2.1em 1.2em
+		padding 2em 1.7em 2em 1.2em
 		background rgba(0, 0, 0, .15)
 		position relative
 		z-index 9
@@ -474,15 +475,15 @@ footer
 @media screen and (min-width: 768px)
 	.content
 		#informacion-inicio
-			top 62%
+			top -14.5em
 		#informacion-empresa
-			top 44%
+			top -22em
 		#informacion-proyectos
-			top 39%
+			top -23em
 		#informacion-servicios
-			top 42%
+			top -24em
 		#informacion-contactos
-			top 38%
+			top -24em
 			.contacto-panel
 				padding 2em 3em 0 4.4em
 
@@ -492,7 +493,30 @@ footer
 //@media screen and (min-width: 1280px)
 
 
-//@media screen and (min-width: 1440px)
+@media screen and (min-width: 1440px)
+	.content
+		.contenido
+			#titulo-home
+				top 47%
+		#informacion-inicio
+			top -15.5em
+		#informacion-empresa
+			top -23em
+		#informacion-proyectos
+			top -24em
+		#informacion-servicios
+			top -25em
+		#informacion-contactos
+			top -25em
+
+		#owl-proyectos
+			margin-bottom 3.3em
+			.item
+				.row
+					.imagen-thumb
+						img
+						.etiqueta
+							width 105px
 
 
 //@media screen and (min-width: 1900px)

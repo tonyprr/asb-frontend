@@ -1,0 +1,53 @@
+<div class="contenido" id="contenido" 
+	data-ng-controller="ProyectosController">
+    <div class="banner" id="banner">
+
+    </div>
+    
+<div id="informacion-proyectos" class="">
+	<h2 class="titulo"> PROYECTOS </h2>
+        <ul class="nav nav-pills" ng-init="activo = false">
+          <li ng-class="{'active' : cateSelec.idcontcate === ''}">
+              <a href="" ng-click="selectCategoria('')">TODOS</a>
+          </li>
+          <li ng-repeat="categoria in categorias"
+              ng-class="{'active' : cateSelec.idcontcate === categoria.idcontcate}">
+              <a href="" ng-click="selectCategoria(categoria)">
+                  <span ng-bind="categoria.descripcion" ></span>
+              </a>
+          </li>
+          
+        </ul>
+        
+        <div id="lista-proyectos">
+            <div class="row">
+                
+                <div ng-repeat="contenido in contenidos | filter:cateSelec"
+                    class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="item ">
+                        <img src="img/iconos/servicios-centros-empresariales.jpg" class="img-responsive"/>
+                        <div class="etiqueta">
+                            <span ng-bind="contenido.adicional1"></span><br/>
+                            Miraflores
+                        </div>
+                    </div>
+                </div>
+                        
+            </div>            
+	</div>
+
+    <div ng-include="'views/infoEmpresa.html'">
+
+    </div>
+
+    <div ng-include="'views/social.html'">
+
+    </div>
+
+    <br/>        
+</div>
+
+
+</div>
+
+        

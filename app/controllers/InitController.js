@@ -46,7 +46,7 @@ define(['app'], function (app) {
         //$scope.isActiveMenu($location.path());
         
         
-        $rootScope.appUrl = "/delib-backend/web/api";
+        $rootScope.appUrl = "/asb-backend/web/api";
     };
 
     app.controller('InitController', ['$scope', '$rootScope', '$http', '$location', 'Auth', initController]);
