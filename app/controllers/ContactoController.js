@@ -24,7 +24,8 @@ define(['app'], function (app) {
                 );    
             } else if ($(window).width() <= 1280) {
                 $('#contenido').height(
-                        2*($(window).height() - $('#header').height() - $('#footer').height())/3 + 44
+                        $(window).height() - $('#header').height() - $('#footer').height() - 80
+                        //2*($(window).height() - $('#header').height() - $('#footer').height())/3 + 44
                 );    
             }  else {
                     $('#contenido').height(

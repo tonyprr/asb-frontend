@@ -88,11 +88,11 @@ ul.nav-stacked
 #logo
 	position relative
 	margin-left 4.1em
-	margin-top 1.5em
-	width 90px
+	margin-top 2em
+	width 70px
 	z-index 10
 	img
-		width 90px
+		width 70px
 
 .prev
 	background-image url(../img/iconos/flechas.png)
@@ -122,7 +122,7 @@ ul.nav-stacked
 		position relative
 		padding 0 !important
 		margin-right 0 !important
-		margin-top 1.5em
+		margin-top 0.8em
 
 .menu-principal-movil
 	background-color white
@@ -139,11 +139,13 @@ ul.nav-stacked
 
 .menu-principal
 	.iconos-social
-		margin:1em 2.1em 3.5em
+		float right
+		margin 1em 0.6em 3.5em 0
 
 .iconos-footer
 	.iconos-social
-		margin:1em auto 5em auto
+		float none
+		margin 1em auto 5em auto
 
 .nav-pills
 	& > li
@@ -155,9 +157,7 @@ ul.nav-stacked
 	z-index 20
 	margin-top 1em
 	.iconos-social
-		margin 1em auto 5em auto
-		width 170px
-		float none
+		width 190px
 		.logo-fb
 			float left
 			margin-right 1em
@@ -240,7 +240,7 @@ footer
 		font-size 0.8em
 		margin-top 0.6em
 		position relative
-		width 99%
+		width 98%
 		z-index 20
 		div
 			line-height 26px
@@ -253,10 +253,10 @@ footer
 		.banner
 			/*border 1px solid green*/
 			position relative
-			margin-left 1.7em
+			margin-left 3.6em
 			margin-top 0
 			overflow hidden
-			width 96%
+			width 90%
 			height 97%
 			z-index 8
 	#titulo-home
@@ -280,7 +280,7 @@ footer
 	#owl-proyectos
 		color black
 		margin-bottom 2.5em
-		padding 1.6em 1.7em 1.6em 1.7em
+		padding 1.5em 1.7em 1.5em 1em
 		background rgba(0, 0, 0, .15)
 		position relative
 		z-index 9
@@ -306,7 +306,7 @@ footer
 
 	#lista-proyectos
 		color black
-		padding 2em 12%
+		padding 2em 12% 1em 12%
 		width 100%
 		z-index 9
 		.item
@@ -488,8 +488,22 @@ footer
 
 @media screen and (min-width: 768px)
 	.content
+		.contenido
+			#titulo-home
+				top 45%
+				div
+					h2
+						font-size 2em
+						margin 0.2em auto 0.1em 0.1em
+		#info-empresa
+			font-size 1em
 		#informacion-inicio
-			top -12.5em
+			top -12.2em
+			#owl-proyectos
+				margin-bottom 1.8em
+		#informacion-inicio
+			padding-left 3.6em
+			top -11em
 		#informacion-empresa
 			top -23em
 		#informacion-proyectos
@@ -519,9 +533,9 @@ footer
 		#info-empresa
 			font-size 1em
 		#informacion-inicio
-			top -13.5em
+			top -12.2em
 			#owl-proyectos
-				margin-bottom 2.6em
+				margin-bottom 2em
 
 @media screen and (min-width: 1440px)
 	#logo
@@ -551,7 +565,7 @@ footer
 		#informacion-inicio
 			top -16.8em
 			#owl-proyectos
-				margin-bottom 2.9em
+				margin-bottom 3.3em
 				font-size 1.3em
 				padding-right 0.9em
 				padding-left 1.5em
