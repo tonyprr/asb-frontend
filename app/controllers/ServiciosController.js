@@ -11,7 +11,11 @@ define(['app'], function (app) {
 
         $("#banner").backstretch("./img/banner/servicios.jpg");
         var $window = $(window).on('resize', function() {
-            if ($(window).width() <= 767) {
+            if ($(window).height() <= 768 && $(window).width() >= 768) {
+                $('#banner').height(
+                    $(window).height() - $('#header').height() - $('#footer').height()
+                );
+            } else if ($(window).width() <= 767) {
                             $('#contenido').height(
                                     ($(window).height() - $('#header').height() - $('#footer').height() - 20) / 2
                             );    

@@ -11,14 +11,18 @@ define(['app'], function (app) {
 
         $("#banner").backstretch("./img/banner/proyectos.jpg");
         var $window = $(window).on('resize', function() {
-            if ($(window).width() <= 767) {
-                            $('#contenido').height(
-                                    ($(window).height() - $('#header').height() - $('#footer').height() - 20) / 2
-                            );    
+            if ($(window).height() <= 768 && $(window).width() >= 768) {
+                $('#banner').height(
+                    $(window).height() - $('#header').height() - $('#footer').height()
+                );
+            } else if ($(window).width() <= 767) {
+                $('#contenido').height(
+                        ($(window).height() - $('#header').height() - $('#footer').height() - 20) / 2
+                );    
             } else {
-                            $('#contenido').height(
-                                    $(window).height() - $('#header').height() - $('#footer').height() - 65
-                            );    
+                $('#contenido').height(
+                        $(window).height() - $('#header').height() - $('#footer').height() - 65
+                );    
             }
             $("#banner").backstretch("./img/banner/proyectos.jpg");
         }).trigger('resize'); //on page load     
