@@ -1,0 +1,51 @@
+<div class="row hidden-xs" id="panelMenuHeader">
+	<div class="col-sm-5 col-md-4">
+		
+        <div id="logo">
+                <img data-ng-src="img/iconos/logotipo-asb.png"/>
+        </div>
+	</div>
+
+        <div class="menu-principal col-sm-7 col-md-8" style="padding-right: 0;margin-right: 0">
+        <div class="row" style="padding-right: 0;margin-right: 0">
+            
+            <div class="col-sm-4 col-sm-offset-8 col-md-3 col-md-offset-9" style="padding-right: 0;margin-right: 0">
+                <div class="iconos-social">
+                    <div class="logo-fb">
+                        <a target="_blank" href="https://www.facebook.com/asb">
+                            <div class="logo-fb-img"></div>
+                        </a>
+                    </div>
+                    <div class="logo-twitter">
+                        <a target="_blank" href="https://www.facebook.com/asb">
+                            <div class="logo-twitter-img"></div>
+                        </a>
+                    </div>
+                    <div class="logo-youtube">
+                        <a target="_blank" href="https://www.facebook.com/asb">
+                            <div class="logo-youtube-img"></div>
+                        </a>
+                    </div>
+                </div>
+                <br/>
+            </div>
+
+	          <div class="col-sm-4 col-sm-offset-8 col-md-3 col-md-offset-9 menu-principal-content"
+                       style="padding-right: 0;margin-right: 0">
+                      <ul class="nav nav-pills nav-stacked">
+	                <li ng-class="{'active' : isActiveMenu('/')}"
+                            ng-click="selectMenu('/')"><a ui-sref="public.home" style="border-radius: 0;">INICIO</a></li>
+	                <li ng-class="{'active' : isActiveMenu('/empresa')}"
+	                    ng-click="selectMenu('/empresa')"><a ui-sref="public.empresa" style="border-radius: 0">EMPRESA</a></li>
+	                <li ng-class="{'active' : isActiveMenu('/proyectos')}"
+	                    ng-click="selectMenu('/proyectos')"><a ui-sref="public.proyectos" style="border-radius: 0">PROYECTOS</a></li>
+	                <li ng-class="{'active' : isActiveMenu('/servicios')}"
+	                    ng-click="selectMenu('/servicios')"><a ui-sref="public.servicios" style="border-radius: 0">SERVICIOS</a></li>
+	                <li ng-class="{'active' : isActiveMenu('/contacto')}"
+	                    ng-click="selectMenu('/contacto')"><a ui-sref="public.contacto" style="border-radius: 0">CONT&Aacute;CTENOS</a></li>
+	              </ul>
+	          </div>
+        </div>
+	</div>
+
+</div>

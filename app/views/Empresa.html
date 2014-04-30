@@ -1,5 +1,10 @@
 <div class="contenido" id="contenido" 
 	data-ng-controller="EmpresaController">
+
+    <div ng-include="'views/menu.html'">
+
+    </div>
+
     <div class="banner row" id="banner">
 
     </div>
@@ -54,7 +59,7 @@
 
             </div>
 
-            <div ng-include="'views/social.html'">
+            <div ng-include="'views/social.html'" class="visible-xs">
 
             </div>
     </div>

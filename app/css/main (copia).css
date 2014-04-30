@@ -1,6 +1,19 @@
+@font-face{font-family:'Heldustry';font-style:normal;font-weight:normal;src:url("../fonts/HeldustryFT_Regular.ttf") format('truetype')}
+@font-face{font-family:'mangal';font-style:normal;font-weight:normal;src:url("../fonts/mangal.ttf") format('truetype')}
+@font-face{font-family:'mangalb';font-style:normal;font-weight:normal;src:url("../fonts/mangalb.ttf") format('truetype')}
+@font-face{font-family:'Pacifico';font-style:normal;font-weight:normal;src:url("../fonts/Pacifico.ttf") format('truetype')}
+@font-face{font-family:'Remachine';font-style:normal;font-weight:normal;src:url("../fonts/RemachineScript.ttf") format('truetype')}
+
+/*** NUEVO ***/
 @font-face{font-family:'Hum521l';font-style:normal;font-weight:normal;src:url("../fonts/hum521l.ttf") format('truetype')}
+/*** NUEVO ***/
+
 html{height:100%;padding:0;margin:0;color:#000}
-body{height:100%;padding:0;margin:0;font-family:Hum521l;font-size:1.6em}
+
+/*** modifica ***/
+body{height:100%;padding:0;margin:0;font-family: Hum521l;font-size: 1.6em;}
+/*** modifica ***/
+
 .text-bold{font-weight:bold !important}
 .container{height:100%;width:100%;padding:0;margin:0;overflow:auto}
 .thumbnail{border-radius:8px}
@@ -28,54 +41,77 @@ ul.nav-stacked li a{padding:.4em .3em .3em .1em}
 #panelMenuHeader .menu-principal{position:relative;padding:0 !important;margin-right:0 !important;margin-top:1.5em}
 .menu-principal-movil{background-color:#fff;padding:.2em 0;position:absolute;top:0;margin:0;width:100%;z-index:20;}
 .menu-principal-movil #logo-small img{height:35px}
-.menu-principal .iconos-social{margin:1em 2.1em 3.5em}
-.iconos-footer .iconos-social{margin:1em auto 5em auto}
-.nav-pills > li > a{border-radius:0 !important}
 .menu-principal,.iconos-footer{z-index:20;margin-top:1em;}
-.menu-principal .iconos-social,.iconos-footer .iconos-social{margin:1em auto 5em auto;width:170px;float:none;}
-.menu-principal .iconos-social .logo-fb,.iconos-footer .iconos-social .logo-fb{float:left;margin-right:1em;}
+
+/*** modifica ***/
+.menu-principal .iconos-social{margin:1em 2.1em 3.7em auto;width:170px;float:none;}
+.iconos-footer .iconos-social{margin:1em auto 5em auto;width:170px;float:none;}
+/*** modifica ***/
+
+
+.menu-principal .iconos-social .logo-fb,.iconos-footer .iconos-social .logo-fb{float:left;margin-right:.7em;}
 .menu-principal .iconos-social .logo-fb .logo-fb-img,.iconos-footer .iconos-social .logo-fb .logo-fb-img{float:none;background-image:url("../img/iconos/icono-facebook.png");width:40px;height:29px;cursor:pointer}
 .menu-principal .iconos-social .logo-fb .logo-fb-img:hover,.iconos-footer .iconos-social .logo-fb .logo-fb-img:hover{background-position:bottom left}
-.menu-principal .iconos-social .logo-twitter,.iconos-footer .iconos-social .logo-twitter{float:left;margin-right:1.6em;}
+.menu-principal .iconos-social .logo-twitter,.iconos-footer .iconos-social .logo-twitter{float:left;margin-right:1.3em;}
 .menu-principal .iconos-social .logo-twitter .logo-twitter-img,.iconos-footer .iconos-social .logo-twitter .logo-twitter-img{float:none;background-image:url("../img/iconos/icono-twitter.png");width:40px;height:29px;cursor:pointer}
 .menu-principal .iconos-social .logo-twitter .logo-twitter-img:hover,.iconos-footer .iconos-social .logo-twitter .logo-twitter-img:hover{background-position:bottom left}
 .menu-principal .iconos-social .logo-youtube,.iconos-footer .iconos-social .logo-youtube{float:left;}
 .menu-principal .iconos-social .logo-youtube .logo-youtube-img,.iconos-footer .iconos-social .logo-youtube .logo-youtube-img{float:none;background-image:url("../img/iconos/icono-youtube.png");width:40px;height:28px;cursor:pointer}
 .menu-principal .iconos-social .logo-youtube .logo-youtube-img:hover,.iconos-footer .iconos-social .logo-youtube .logo-youtube-img:hover{background-position:bottom left}
 .menu-principal .menu-principal-content,.iconos-footer .menu-principal-content{padding-right:0 !important;}
-.menu-principal .menu-principal-content .nav-stacked,.iconos-footer .menu-principal-content .nav-stacked{float:right;text-align:right;}
-.menu-principal .menu-principal-content .nav-stacked li,.iconos-footer .menu-principal-content .nav-stacked li{width:186px;}
-.menu-principal .menu-principal-content .nav-stacked li a,.iconos-footer .menu-principal-content .nav-stacked li a{color:#656565 !important;padding-right:3em !important}
+.menu-principal .menu-principal-content .nav-stacked,.iconos-footer .menu-principal-content .nav-stacked{text-align:right;}
+.menu-principal .menu-principal-content .nav-stacked li,.iconos-footer .menu-principal-content .nav-stacked li{
+
+/*** modifica ***/
+    max-width:280px;
+/*** modifica ***/
+    
+padding-right: 0;margin-right: 0}
+
+.menu-principal .menu-principal-content .nav-stacked li a,.iconos-footer .menu-principal-content .nav-stacked li a{color:#656565 !important;padding-right:3.1em !important;}
+/*** NUEVO ***/
+.nav-pills>li>a{border-radius:0 !important}
+.content #informacion-proyectos .nav-pills > li > a{border: 1px solid #DEDEDE !important;}
+.content #informacion-proyectos .nav-pills > li.active > a{border: 1px solid #DEDEDE;background-color: black;}
+/*** NUEVO ***/
+
 .menu-principal .menu-principal-content .nav-stacked li.active a,.iconos-footer .menu-principal-content .nav-stacked li.active a{color:#fff !important}
 footer{background:#000;color:#fff !important;padding:0;text-align:center;width:100%;position:absolute;margin:0;bottom:-10px;z-index:4;height:42px;line-height:42px;}
 footer h3{position:absolute;font-size:.4em;font-weight:normal;line-height:20px;padding-top:.7em;margin:0 auto;text-align:center;width:100%;z-index:10;}
 footer h3 a{color:#fff !important}
-.content{height:96%;overflow:visible;}
-.content #info-empresa{color:#000;font-size:.8em;margin-top:.6em;position:relative;width:99%;z-index:20;}
+.content{
+/*** modifica ***/
+    height:96%;
+/*** modifica ***/
+overflow:visible;}
+.content #info-empresa{font-size:.8em;margin-top:.6em;position:relative;z-index:20;width: 99%;
+/*** NUEVO ***/
+                       color: black;
+/*** NUEVO ***/
+}
 .content #info-empresa div{line-height:26px;padding:.6em}
 .content .contenido{height:100%;width:100%;position:relative;}
 .content .contenido .banner{position:relative;margin-left:1.7em;margin-top:0;overflow:hidden;width:96%;height:97%;z-index:8}
 .content #titulo-home{position:absolute;width:100%;top:48%;z-index:9;}
 .content #titulo-home div{background:rgba(0,0,0,0.65);color:#fff;padding:0 1em .5em 2.1em;}
-.content #titulo-home div h2{font-size:2.2em;margin:.3em auto 0 .1em;padding:0}
-.content #titulo-home div p{font-size:1em;margin:0 auto .3em .1em;padding:0}
-.content #owl-proyectos{color:#000;margin-bottom:2.5em;padding:1.6em 1.7em 1.6em 1.7em;background:rgba(0,0,0,0.15);position:relative;z-index:9;}
+.content #titulo-home div h2{font-size:2.7em;margin: 0.2em auto 0 0.1em;padding: 0}
+.content #titulo-home div p{font-size:1.1em;margin: 0 auto 0.3em 0.1em;padding: 0}
+.content #owl-proyectos{color:#000;margin-bottom:2.8em;padding:2em 1.7em 2em 1.7em;background:rgba(0,0,0,0.15);position:relative;z-index:9;}
 .content #owl-proyectos .item{margin:0 2.6em 0 1em;padding:0;}
 .content #owl-proyectos .item .row{background-color:#bababa;padding:0;}
 .content #owl-proyectos .item .row .imagen-thumb{margin:0 !important;padding:0 !important;left:0;}
 .content #owl-proyectos .item .row .imagen-thumb .etiqueta{background-color:#a9111d;color:#fff;padding:.3em;text-align:center}
 .content #owl-proyectos .item .row .proy-descrip-thumb{margin:0 !important;padding:1.5em;text-align:center}
 .content #lista-proyectos{color:#000;padding:2em 12%;width:100%;z-index:9;}
-.content #lista-proyectos .item{margin:.5em .2em;padding:0;border:16px #bababa solid;}
+.content #lista-proyectos .item{margin:.5em .2em;padding:0;border:19px #DEDEDE solid;}
 .content #lista-proyectos .item .etiqueta{color:#656565;padding:.3em;text-align:center}
 .content #lista-servicios{color:#000;padding:2em 0;width:100%;z-index:9;}
 .content #lista-servicios .item{margin:0 1em;padding:0;border:16px #bababa solid;}
 .content #lista-servicios .item .etiqueta{color:#656565;padding:.3em;text-align:center}
+
 .content #informacion-inicio,.content #informacion-empresa,.content #informacion-proyectos,.content #informacion-servicios,.content #informacion-contactos{background-color:transparent;text-align:justify;color:#656565;padding:0 60px;position:relative;overflow:auto;z-index:9;}
 .content #informacion-inicio .titulo,.content #informacion-empresa .titulo,.content #informacion-proyectos .titulo,.content #informacion-servicios .titulo,.content #informacion-contactos .titulo{color:#a9111d;font-size:2.9em}
 .content #informacion-inicio,.content #informacion-contactos{padding:0}
-.content #informacion-proyectos .nav-pills > li > a{border:1px solid #dedede !important}
-.content #informacion-proyectos .nav-pills > li.active > a{border:1px solid #dedede;background-color:#000}
 .content .contact{margin:auto;margin-top:1.1em;overflow:hidden;text-align:center;color:#7d6350;font-size:.9em !important;background-color:#eaf9f9}
 .simple-menu{display:none;position:absolute;margin-top:.2em;margin-left:.2em;z-index:110}
 .overlay-menu{display:none;position:absolute;right:0;margin-top:0;margin-right:0}
@@ -107,31 +143,58 @@ nav{display:none !important}
 .content #informacion-empresa{top:-4em}
 .content #informacion-proyectos{padding:0;top:-8em;}
 .content #informacion-proyectos h2{margin-left:.4em}
-.content #informacion-proyectos .nav-pills{font-size:.8em !important}
+.content #informacion-proyectos .nav-pills{font-size:.8em !important;color: #DEDEDE !important;}
 .content #informacion-servicios{top:-8em}
 .content #informacion-contactos{padding:0;top:-8em;}
 .content #informacion-contactos .contacto-panel{padding:0 1.3em}
-}@media screen and (min-width: 768px){.content #informacion-inicio{top:-12.5em}
+}@media screen and (min-width: 768px){.content #informacion-inicio{top:-14.5em}
 .content #informacion-empresa{top:-23em}
-.content #informacion-proyectos{top:-23em}
-.content #informacion-servicios{top:-24em}
-.content #informacion-contactos{top:-24em;}
+.content #informacion-proyectos{top:-22em}
+.content #informacion-servicios{top:-23em}
+.content #informacion-contactos{top:-23em;}
 .content #informacion-contactos .contacto-panel{padding:2em 3em 0 4.4em}
-}@media screen and (min-width: 1280px){.content .contenido #titulo-home{top:49%;}
-.content .contenido #titulo-home div h2{font-size:2.4em;margin:.3em auto .1em .1em}
-.content #info-empresa{font-size:1em}
-.content #informacion-inicio{top:-13.5em;}
-.content #informacion-inicio #owl-proyectos{margin-bottom:2.6em}
-}@media screen and (min-width: 1440px){#logo{position:relative;margin-left:4.1em;margin-top:1.5em;width:110px;z-index:10;}
-#logo img{width:110px}
-.menu-principal .menu-principal-content .nav-stacked li a{padding-top:.6em;padding-bottom:.6em}
-.content .contenido #titulo-home{top:48%;}
-.content .contenido #titulo-home div h2{font-size:2.8em;margin:.4em auto .1em .1em}
-.content #informacion-inicio{top:-16.8em;}
-.content #informacion-inicio #owl-proyectos{margin-bottom:2.9em;font-size:1.3em;padding-right:.9em;padding-left:1.5em;}
-.content #informacion-inicio #owl-proyectos .item .row .imagen-thumb img,.content #informacion-inicio #owl-proyectos .item .row .imagen-thumb .etiqueta{width:125px}
+}@media screen and (min-width: 1280px){.content #info-empresa{font-size:1em}
+.content #informacion-inicio{
+/*** modifica ***/
+    top:-12.5em
+/*** modifica ***/
+
+}
+.content #owl-proyectos{
+/*** modifica ***/
+    margin-bottom:1.8em
+/*** modifica ***/
+}
+}@media screen and (min-width: 1440px){
+/*** modifica ***/
+.content .contenido #titulo-home{top:49%}
+.content #informacion-inicio{top:-17.7em}
+
 .content #informacion-empresa{top:-23em}
 .content #informacion-proyectos{top:-24em}
 .content #informacion-servicios{top:-25em}
-.content #informacion-contactos{top:-25em}
+.content #informacion-contactos{top:-29em}
+/*** modifica ***/
+
+
+/*** modifica ***/
+.content #owl-proyectos{
+    margin-bottom:3.6em;font-size: 1.3em;padding-right: 0.9em;padding-left: 1.5em
+}
+.content #owl-proyectos .item {margin-right: 2.9em;}
+/*** modifica ***/
+
+.content #owl-proyectos .item .row .imagen-thumb img,.content #owl-proyectos .item .row .imagen-thumb .etiqueta{width:125px}
+
+/*** NUEVO ***/
+.content #titulo-home div h2{font-size:2.8em}
+#logo{position:relative;margin-left:4.1em;margin-top:1.5em;width:110px;z-index:10;}
+#logo img{width:110px}
+/*** NUEVO ***/
+.menu-principal .menu-principal-content .nav-stacked li a,.iconos-footer .menu-principal-content .nav-stacked li a{
+/*** NUEVO ***/
+    padding-top: 0.6em;padding-bottom: .6em;
+/*** NUEVO ***/
+}
+
 }

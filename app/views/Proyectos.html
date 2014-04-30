@@ -1,5 +1,9 @@
 <div class="contenido" id="contenido" 
 	data-ng-controller="ProyectosController">
+    <div ng-include="'views/menu.html'">
+
+    </div>
+
     <div class="banner" id="banner">
 
     </div>
@@ -7,10 +11,10 @@
 <div id="informacion-proyectos" class="">
 	<h2 class="titulo"> PROYECTOS </h2>
         <ul class="nav nav-pills">
-          <li class="active"><a href="#">TODOS</a></li>
-          <li><a href="#">EN VENTA</a></li>
-          <li><a href="#">TERMINADOS</a></li>
-          <li><a href="#">EN PROYECTO</a></li>
+          <li class="active" ><a href="#" style="border: 1px solid black;background-color: black;border-radius:0;margin-right: 0.4em;">TODOS</a></li>
+          <li><a href="#" style="border: 1px solid #DEDEDE !important;color: #656565;border-radius:0 !important;margin-right: 0.4em;">EN VENTA</a></li>
+          <li><a href="#" style="border: 1px solid #DEDEDE !important;color: #656565;border-radius:0 !important;margin-right: 0.4em;">TERMINADOS</a></li>
+          <li><a href="#" style="border: 1px solid #DEDEDE !important;color: #656565;border-radius:0 !important">EN PROYECTO</a></li>
         </ul>
         
         <div id="lista-proyectos">
@@ -82,7 +86,7 @@
 
     </div>
 
-    <div ng-include="'views/social.html'">
+    <div ng-include="'views/social.html'" class="visible-xs">
 
     </div>
 

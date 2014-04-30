@@ -3,41 +3,14 @@ cian = #EAF9F9
 gris = #656565
 rojo = #A9111D
 gris_claro = #BABABA
+gris_claro2 = #DEDEDE
 
 
 @font-face {
-	font-family: 'Heldustry';
+	font-family: 'Hum521l';
 	font-style: normal;
 	font-weight: normal;
-	src:url('../fonts/HeldustryFT_Regular.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'mangal';
-	font-style: normal;
-	font-weight: normal;
-	src:url('../fonts/mangal.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'mangalb';
-	font-style: normal;
-	font-weight: normal;
-	src:url('../fonts/mangalb.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Pacifico';
-	font-style: normal;
-	font-weight: normal;
-	src:url('../fonts/Pacifico.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Remachine';
-	font-style: normal;
-	font-weight: normal;
-	src:url('../fonts/RemachineScript.ttf') format('truetype');
+	src:url('../fonts/hum521l.ttf') format('truetype');
 }
 
 html
@@ -49,6 +22,8 @@ body
 	height 100%
 	padding 0
 	margin 0
+	font-family Hum521l
+	font-size 1.6em
 
 .text-bold
 	font-weight bold !important
@@ -111,10 +86,10 @@ ul.nav-stacked
 	color #452D14 !important
 
 #logo
-	position absolute
+	position relative
 	margin-left 4.1em
 	margin-top 1.5em
-	width 100%
+	width 90px
 	z-index 10
 	img
 		width 90px
@@ -137,12 +112,18 @@ ul.nav-stacked
 	margin-top 5em
 	width 40px
 
-.menu-principal
+#panelMenuHeader
 	position absolute
-	padding 0 !important
-	margin-right 0 !important
-	margin-top 1.5em
-	width 101%
+	z-index 999
+	width 100%
+	margin 0
+	padding 0
+	.menu-principal
+		position relative
+		padding 0 !important
+		margin-right 0 !important
+		margin-top 1.5em
+
 .menu-principal-movil
 	background-color white
 	padding 0.2em 0
@@ -157,6 +138,19 @@ ul.nav-stacked
 
 
 .menu-principal
+	.iconos-social
+		margin:1em 2.1em 3.5em
+
+.iconos-footer
+	.iconos-social
+		margin:1em auto 5em auto
+
+.nav-pills
+	& > li
+		& > a
+			border-radius 0 !important
+
+.menu-principal
 .iconos-footer
 	z-index 20
 	margin-top 1em
@@ -166,7 +160,7 @@ ul.nav-stacked
 		float none
 		.logo-fb
 			float left
-			margin-right 0.7em
+			margin-right 1em
 			.logo-fb-img
 				float none
 				background-image url(../img/iconos/icono-facebook.png)
@@ -177,7 +171,7 @@ ul.nav-stacked
 				background-position bottom left
 		.logo-twitter
 			float left
-			margin-right 1.3em
+			margin-right 1.6em
 			.logo-twitter-img
 				float none
 				background-image url(../img/iconos/icono-twitter.png)
@@ -200,11 +194,13 @@ ul.nav-stacked
 	.menu-principal-content
 		padding-right 0 !important
 		.nav-stacked
+			float right
 			text-align right
 			li
+				width 186px
 				a
 					color gris !important
-					padding-right 3.2em !important
+					padding-right 3em !important
 			li.active
 				a
 					color white !important
@@ -219,8 +215,8 @@ footer
 	margin 0
 	bottom -10px
 	z-index 4
-	height 35px
-	line-height 35px
+	height 42px
+	line-height 42px
 	h3
 		position absolute
 		font-size 0.4em
@@ -236,12 +232,15 @@ footer
 
 
 .content
-	height 98%
+	height 96%
 	overflow visible
 
 	#info-empresa
-		margin-top .5em
+		color black
+		font-size 0.8em
+		margin-top 0.6em
 		position relative
+		width 99%
 		z-index 20
 		div
 			line-height 26px
@@ -250,6 +249,7 @@ footer
 	.contenido
 		height 100%
 		width 100%
+		position relative
 		.banner
 			/*border 1px solid green*/
 			position relative
@@ -262,21 +262,25 @@ footer
 	#titulo-home
 		position absolute
 		width 100%
-		top 47%
+		top 48%
 		z-index 9
 		div
 			background rgba(0, 0, 0, .65)
 			color white
 			padding 0 1em 0.5em 2.1em
 			h2
-				font-size 2.7em
+				font-size 2.2em
+				margin 0.3em auto 0 0.1em
+				padding 0
 			p
-				font-size 1.1em
+				font-size 1em
+				margin 0 auto 0.3em 0.1em
+				padding 0
 
 	#owl-proyectos
 		color black
-		margin-bottom 1em
-		padding 2em 1.7em 2em 1.2em
+		margin-bottom 2.5em
+		padding 1.6em 1.7em 1.6em 1.7em
 		background rgba(0, 0, 0, .15)
 		position relative
 		z-index 9
@@ -347,6 +351,16 @@ footer
 	#informacion-inicio
 	#informacion-contactos
 		padding 0
+	#informacion-proyectos
+		.nav-pills
+			& > li
+				& > a
+					border 1px solid gris_claro2 !important
+			& > li.active
+				& > a
+					border 1px solid gris_claro2
+					background-color black
+
 
 	.contact
 		margin auto
@@ -475,9 +489,9 @@ footer
 @media screen and (min-width: 768px)
 	.content
 		#informacion-inicio
-			top -14.5em
+			top -12.5em
 		#informacion-empresa
-			top -22em
+			top -23em
 		#informacion-proyectos
 			top -23em
 		#informacion-servicios
@@ -489,17 +503,64 @@ footer
 
 
 //@media screen and (min-width: 1024px)
+//	.content
+//		#owl-proyectos
+//			margin-bottom 0em
 
-//@media screen and (min-width: 1280px)
-
-
-@media screen and (min-width: 1440px)
+@media screen and (min-width: 1280px)
 	.content
 		.contenido
 			#titulo-home
-				top 47%
+				top 49%
+				div
+					h2
+						font-size 2.4em
+						margin 0.3em auto 0.1em 0.1em
+		#info-empresa
+			font-size 1em
 		#informacion-inicio
-			top -15.5em
+			top -13.5em
+			#owl-proyectos
+				margin-bottom 2.6em
+
+@media screen and (min-width: 1440px)
+	#logo
+		position relative
+		margin-left 4.1em
+		margin-top 1.5em
+		width 110px
+		z-index 10
+		img
+			width 110px
+	.menu-principal
+		.menu-principal-content
+			.nav-stacked
+				li
+					a
+						padding-top 0.6em
+						padding-bottom .6em
+	.content
+		.contenido
+			#titulo-home
+				top 48%
+				div
+					h2
+						font-size 2.8em
+						margin 0.4em auto 0.1em 0.1em
+
+		#informacion-inicio
+			top -16.8em
+			#owl-proyectos
+				margin-bottom 2.9em
+				font-size 1.3em
+				padding-right 0.9em
+				padding-left 1.5em
+				.item
+					.row
+						.imagen-thumb
+							img
+							.etiqueta
+								width 125px
 		#informacion-empresa
 			top -23em
 		#informacion-proyectos
@@ -508,15 +569,6 @@ footer
 			top -25em
 		#informacion-contactos
 			top -25em
-
-		#owl-proyectos
-			margin-bottom 3.3em
-			.item
-				.row
-					.imagen-thumb
-						img
-						.etiqueta
-							width 105px
 
 
 //@media screen and (min-width: 1900px)

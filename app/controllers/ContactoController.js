@@ -8,7 +8,7 @@ define(['app'], function (app) {
         $scope.highlight = function (path) {
             return $location.path().substr(0, path.length) == path;
         }
-        $('#map_canvas').height(230);
+        $('#map_canvas').height(360);
 //        var $window = $(window).on('resize', function() {
 //                    $('#map_canvas').height(
 //                            $(window).height() - $('#header').height() - $('#footer').height() - $('#contact').height() - 35
@@ -19,14 +19,19 @@ define(['app'], function (app) {
         $("#banner").backstretch("./img/banner/contactenos.jpg");
         var $window = $(window).on('resize', function() {
             if ($(window).width() <= 767) {
-                            $('#contenido').height(
-                                    ($(window).height() - $('#header').height() - $('#footer').height() - 20) / 2
-                            );    
-            } else {
-                            $('#contenido').height(
-                                    $(window).height() - $('#header').height() - $('#footer').height() - 120
-                            );    
+                $('#contenido').height(
+                        ($(window).height() - $('#header').height() - $('#footer').height() - 20) / 2
+                );    
+            } else if ($(window).width() <= 1280) {
+                $('#contenido').height(
+                        2*($(window).height() - $('#header').height() - $('#footer').height())/3 + 44
+                );    
+            }  else {
+                    $('#contenido').height(
+                            2*($(window).height() - $('#header').height() - $('#footer').height() - 15)/3
+                    );    
             }
+
             $("#banner").backstretch("./img/banner/contactenos.jpg");
         }).trigger('resize'); //on page load     
         
@@ -59,7 +64,7 @@ define(['app'], function (app) {
                 });
 
 
-                var image = 'img/iconos/icono-ubicacion.png';
+                var image = 'img/iconos/ico-ASB.png';
                 var myLatLng = new google.maps.LatLng(-12.1443000,-77.0180000);
                 var beachMarker = new google.maps.Marker({
                         position: myLatLng,
@@ -78,13 +83,14 @@ define(['app'], function (app) {
 
                 var styles = [
                   {
-                        featureType: "all",
+                    featureType: "all",
                     stylers: [
                       { hue: "#656565" },
-                          {Weight:3.5},
-                      { saturation: 0 }
+                      {Weight:3.5},
+                      { saturation: -95 }
                     ]
-                  },{
+                  },
+                  {
                     featureType: "road",
                     elementType: "geometry",
                     stylers: [

@@ -1,6 +1,12 @@
 <div class="contenido" id="contenido" 
 	data-ng-controller="MainController">
+
+    <div ng-include="'views/menu.html'">
+
+    </div>
+
     <div class="banner" id="banner">
+
 
         <div id="titulo-home" class="row">
             <div class="col-lg-4 col-md-5 col-sm-6 col-xs-9">
@@ -11,6 +17,7 @@
         
         
     </div>
+
     
 
     <div id="informacion-inicio">
@@ -114,7 +121,7 @@
 
         </div>
 
-        <div ng-include="'views/social.html'">
+        <div ng-include="'views/social.html'" class="visible-xs">
 
         </div>
 
