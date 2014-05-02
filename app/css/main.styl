@@ -351,6 +351,11 @@ footer
 	#informacion-inicio
 	#informacion-contactos
 		padding 0
+	#informacion-empresa
+		margin-right 0.9em
+		#carousel-empresa
+			border 7px solid gris_claro2
+
 	#informacion-proyectos
 		.nav-pills
 			& > li
@@ -470,6 +475,12 @@ footer
 			top 0
 		#informacion-empresa
 			top -4em
+			#carousel-empresa
+				width 310px
+				.carousel-inner
+					.item
+						img
+							width 310px
 		#informacion-proyectos
 			padding 0
 			top -8em
@@ -505,9 +516,7 @@ footer
 			padding-left 3.6em
 			top -11em
 		#informacion-empresa
-			top -23em
 		#informacion-proyectos
-			top -23em
 		#informacion-servicios
 			top -23em
 		#informacion-contactos
@@ -515,6 +524,10 @@ footer
 			.contacto-panel
 				padding 2em 3em 0 4.4em
 
+		#informacion-proyectos
+			margin-bottom 20px
+		#informacion-servicios
+			margin-bottom 36px
 
 //@media screen and (min-width: 1024px)
 //	.content
@@ -537,7 +550,8 @@ footer
 			#owl-proyectos
 				margin-bottom 2em
 		#informacion-empresa
-			font-size 1.3em
+			p
+				font-size 1.2em
 
 
 @media screen and (min-width: 1440px)
@@ -580,8 +594,10 @@ footer
 								width 125px
 		#informacion-empresa
 			top -25em
+			p
+				font-size 1.3em
 		#informacion-proyectos
-			top -24em
+			top -25em
 		#informacion-servicios
 			top -25em
 		#informacion-contactos
@@ -591,30 +607,56 @@ footer
 //@media screen and (min-width: 1900px)
 
 
-@media screen and (min-width: 768px) and (max-height: 768px)
+@media screen and (min-width: 768px) and (max-height: 650px)
 	.content
 		.contenido
 			.banner
-				height 112%
+				height 100%
 			#titulo-home
-				top 45%
+				top 48%
 				div
 					h2
 						font-size 2.4em
 						margin 0.3em auto 0.1em 0.1em
 		#informacion-inicio
-			margin-bottom 3em
-			top -11em
+			margin-bottom 3.4em
+			top -12em
 			#owl-proyectos
-				margin-bottom 1.6em
+				margin-bottom 2.2em
 		#informacion-empresa
 		#informacion-proyectos
 		#informacion-servicios
 		#informacion-contactos
 			margin-bottom 3em
-			top -16em
+			top -21em
 		#informacion-contactos
-			top -17em
+			top -23em
+				
+@media screen and (min-width: 768px) and (max-height: 510px)
+	.content
+		.contenido
+			.banner
+				height 130%
+			#titulo-home
+				top 40%
+		#informacion-inicio
+			margin-bottom 3em
+			#owl-proyectos
+				margin-bottom 1.8em
+		#informacion-empresa
+		#informacion-proyectos
+		#informacion-servicios
+		#informacion-contactos
+			top -18em
+		#informacion-contactos
+			top -20em
+
+@media screen and (min-width: 768px) and (max-height: 360px)
+	.content
+		.contenido
+			.banner
+				height 150%
+
 				
 @media screen and (max-width: 800px) and (min-height: 1024px)
 	.simple-menu

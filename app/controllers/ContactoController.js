@@ -18,21 +18,19 @@ define(['app'], function (app) {
 
         $("#banner").backstretch("./img/banner/contactenos.jpg");
         var $window = $(window).on('resize', function() {
-            if ($(window).height() <= 768 && $(window).width() >= 768) {
+            if ($(window).height() <= 650 && $(window).width() >= 768) {
+            } else 
+            if ($(window).width() <= 767) {
                 $('#banner').height(
-                    $(window).height() - $('#header').height() - $('#footer').height()
-                );
-            } else  if ($(window).width() <= 767) {
-                $('#contenido').height(
                         ($(window).height() - $('#header').height() - $('#footer').height() - 20) / 2
                 );    
             } else if ($(window).width() <= 1280) {
-                $('#contenido').height(
-                        $(window).height() - $('#header').height() - $('#footer').height() - 80
+                $('#banner').height(
+                        $(window).height() - $('#header').height() - $('#footer').height() - 70
                         //2*($(window).height() - $('#header').height() - $('#footer').height())/3 + 44
                 );    
             }  else {
-                    $('#contenido').height(
+                    $('#banner').height(
                             2*($(window).height() - $('#header').height() - $('#footer').height() - 15)/3
                     );    
             }
