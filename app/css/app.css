@@ -37,3 +37,41 @@ html {
      font-size:2em;
      text-align: center;
  }
+
+#titulo-home {
+    -webkit-transition:2.5s linear all;
+    transition:2.5s linear all;    
+    -webkit-animation-duration: 7s;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-duration: 7s;
+    -moz-animation-delay: 0s;
+    -moz-animation-iteration-count: infinite;
+}
+
+
+
+.sample-show-hide {
+  padding:10px;
+  border:1px solid black;
+  background:white;
+}
+
+.sample-show-hide.ng-hide-add, .sample-show-hide.ng-hide-remove {
+  -webkit-transition:all linear 0.5s;
+  -moz-transition:all linear 0.5s;
+  -o-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+  display:block!important;
+}
+
+.sample-show-hide.ng-hide-add.ng-hide-add-active,
+.sample-show-hide.ng-hide-remove {
+  opacity:0;
+}
+
+.sample-show-hide.ng-hide-add,
+.sample-show-hide.ng-hide-remove.ng-hide-remove-active {
+  opacity:1;
+}
+

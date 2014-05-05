@@ -24,6 +24,7 @@ define(['app'], function (app) {
             }
             $("#banner").backstretch("./img/banner/empresa.jpg");
         }).trigger('resize'); //on page load     
+        $('.carousel').carousel();
     };
 
     app.register.controller('EmpresaController', ['$scope', '$rootScope', '$stateParams', '$filter', '$http', '$location', empresaController]);

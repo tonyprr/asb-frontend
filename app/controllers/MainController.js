@@ -2,12 +2,13 @@
 
 define(['app'], function (app) {
 
-    var mainController = function ($scope, $location) {
+    var mainController = function ($scope, $location, $timeout) {
         var appTitle = 'Home';
         $scope.appTitle = appTitle;
         $scope.highlight = function (path) {
             return $location.path().substr(0, path.length) == path;
         };
+        $scope.mostrarTitulo = true;
 
            $("#banner").backstretch([
                 "./img/banner/1.jpg"
@@ -15,7 +16,7 @@ define(['app'], function (app) {
               , "./img/banner/3.jpg"
               , "./img/banner/4.jpg"
               , "./img/banner/5.jpg"
-            ], {duration: 3000, fade: 400});          
+            ], {duration: 4000, fade: 1000});          
 
 //           $("#banner").backstretch("./img/banner-portada.jpg");
             var $window = $(window).on('resize', function() {
@@ -54,10 +55,52 @@ define(['app'], function (app) {
             autoHeight : true
 
         });
-
+        
         //owl.trigger('owl.play',3000);
+//        $('.carousel').carousel({
+//            interval: 3000
+//        });
+//        $('.carousel').carousel('cycle')
+        
+//        $('#titulo-home').addClass('animated bounceInLeft');
+//        $('#banner').addClass('animated fadeIn');
+        
+            
+            function mostrarTitulo () {
+                $timeout(function() {
+                    console.log("timeout...");
+                    $scope.mostrarTitulo = true;
+                }, 5000);
+                
+            }
+            
+            function ocultarTitulo () {
+                $timeout(function() {
+                    console.log("timeout ocultar...");
+                    $scope.mostrarTitulo = false;
+                }, 5000, true);
+            }
+            
+            //ocultarTitulo()
+//            setTimeout(function() {
+//                alert("ccc");
+//                //console.log("timeout ocultar...");
+//                //$scope.mostrarTitulo = false;
+//            }, 5000);
+            
+        $(window).on("backstretch.before", function (e, instance, index) {
+          // If we wanted to stop the slideshow after it reached the end
+            console.log("before...");
+            $scope.mostrarTitulo = false;
+            
+//            if (index === instance.images.length - 1) {
+//                instance.pause();
+//            };
+            
+        });
+
     }
 
-    app.register.controller('MainController', ['$scope', '$location', mainController]);
+    app.register.controller('MainController', ['$scope', '$location', '$timeout', mainController]);
     
 });
