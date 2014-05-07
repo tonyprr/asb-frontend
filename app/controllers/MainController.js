@@ -8,7 +8,15 @@ define(['app'], function (app) {
         $scope.highlight = function (path) {
             return $location.path().substr(0, path.length) == path;
         };
-        $scope.mostrarTitulo = true;
+        $scope.mostrarTitulo = new Array();
+        
+        $scope.mostrarTitulo[0] = true;
+        $scope.mostrarTitulo[1] = true;
+        $scope.mostrarTitulo[2] = false;
+        $scope.mostrarTitulo[3] = false;
+        $scope.mostrarTitulo[4] = false;
+        $scope.mostrarTitulo[5] = false;
+        $scope.item = 1;
 
            $("#banner").backstretch([
                 "./img/banner/1.jpg"
@@ -16,7 +24,7 @@ define(['app'], function (app) {
               , "./img/banner/3.jpg"
               , "./img/banner/4.jpg"
               , "./img/banner/5.jpg"
-            ], {duration: 4000, fade: 1000});          
+            ], {duration: 6000, fade: 0});          
 
 //           $("#banner").backstretch("./img/banner-portada.jpg");
             var $window = $(window).on('resize', function() {
@@ -82,23 +90,31 @@ define(['app'], function (app) {
             }
             
             //ocultarTitulo()
-//            setTimeout(function() {
-//                alert("ccc");
-//                //console.log("timeout ocultar...");
-//                //$scope.mostrarTitulo = false;
-//            }, 5000);
-            
-        $(window).on("backstretch.before", function (e, instance, index) {
+            setInterval(function() {
+                //alert("ccc");
+//                console.log("interval... " + $scope.item);
+                $scope.mostrarTitulo[$scope.item] = false;
+                if ($scope.item === 5)
+                    $scope.item = 0;
+                $scope.item++;
+                $scope.mostrarTitulo[$scope.item] = true;
+                $scope.$apply();
+            }, 6000);
+
+/*        
+        $("#banner").on("backstretch.after", function (e, instance, index) {
           // If we wanted to stop the slideshow after it reached the end
-            console.log("before...");
-            $scope.mostrarTitulo = false;
-            
+            $scope.mostrarTitulo[$scope.item] = false;
+            $scope.item++;
+            $scope.mostrarTitulo[$scope.item] = true;
+            console.log("before... " + $scope.item);
 //            if (index === instance.images.length - 1) {
 //                instance.pause();
 //            };
-            
+            if ($scope.item === 5)
+                $scope.item = 0;
         });
-
+*/
     }
 
     app.register.controller('MainController', ['$scope', '$location', '$timeout', mainController]);

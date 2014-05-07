@@ -57,11 +57,11 @@ html {
   background:white;
 }
 
-.sample-show-hide.ng-hide-add, .sample-show-hide.ng-hide-remove {
-  -webkit-transition:all linear 0.5s;
-  -moz-transition:all linear 0.5s;
-  -o-transition:all linear 0.5s;
-  transition:all linear 0.5s;
+.sample-show-hide.ng-hide-remove {
+  -webkit-transition:all linear 1s;
+  -moz-transition:all linear 1s;
+  -o-transition:all linear 1s;
+  transition:all linear 1s;
   display:block!important;
 }
 
