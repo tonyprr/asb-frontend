@@ -74,33 +74,18 @@ define(['app'], function (app) {
 //        $('#banner').addClass('animated fadeIn');
         
             
-            function mostrarTitulo () {
-                $timeout(function() {
-                    console.log("timeout...");
-                    $scope.mostrarTitulo = true;
-                }, 5000);
-                
-            }
-            
-            function ocultarTitulo () {
-                $timeout(function() {
-                    console.log("timeout ocultar...");
-                    $scope.mostrarTitulo = false;
-                }, 5000, true);
-            }
-            
-            //ocultarTitulo()
-            setInterval(function() {
-                //alert("ccc");
-//                console.log("interval... " + $scope.item);
-                $scope.mostrarTitulo[$scope.item] = false;
-                if ($scope.item === 5)
-                    $scope.item = 0;
-                $scope.item++;
-                $scope.mostrarTitulo[$scope.item] = true;
-                $scope.$apply();
-            }, 6000);
-
+            $timeout(function() {
+                setInterval(function() {
+    //                console.log("interval... " + $scope.item);
+                    $scope.mostrarTitulo[$scope.item] = false;
+                    if ($scope.item === 5)
+                        $scope.item = 0;
+                    $scope.item++;
+                    $scope.mostrarTitulo[$scope.item] = true;
+                    $scope.$apply();
+                }, 6000);
+            }, 400, true);
+        
 /*        
         $("#banner").on("backstretch.after", function (e, instance, index) {
           // If we wanted to stop the slideshow after it reached the end
