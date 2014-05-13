@@ -53,7 +53,7 @@
                 ng-click="selectMenu('/empresa')" onclick="toggleMenu();" ui-sref="public.empresa">
                 <a href="">EMPRESA</a>
             </li>
-            <li ng-class="{'active' : isActiveMenu('/proyectos')}"
+            <li ng-class="{'active' : isActiveMenu('/proyectos') || isActiveMenu('/proyecto-detalle')}"
                 ng-click="selectMenu('/proyectos')" onclick="toggleMenu();" ui-sref="public.proyectos">
                 <a href="">PROYECTOS</a>
             </li>

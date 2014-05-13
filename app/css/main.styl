@@ -362,15 +362,21 @@ footer
 			border 7px solid gris_claro2
 
 	#informacion-proyectos
+		h5
+			font-weight bold
+		a
+			color gris !important	
 		.nav-pills
 			& > li
 				& > a
-					border 1px solid gris_claro2 !important
+					border 1px solid gris_claro !important
+					color gris !important
+					border-radius none
+					margin-right 0.5em
 			& > li.active
 				& > a
-					border 1px solid gris_claro2
 					background-color black
-
+					color white !important
 
 	.contact
 		margin auto
@@ -483,9 +489,8 @@ footer
 			#carousel-empresa
 				width 310px
 				.carousel-inner
-					.item
-						img
-							width 310px
+					img
+						width 100%
 		#informacion-proyectos
 			padding 0
 			top -8em
@@ -601,6 +606,10 @@ footer
 			top -25em
 			p
 				font-size 1.3em
+			#carousel-empresa
+				.carousel-inner
+					img
+						width 100%
 		#informacion-proyectos
 			top -25em
 		#informacion-servicios
