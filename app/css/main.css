@@ -141,8 +141,8 @@ nav{display:none !important}
 .menu-principal .menu-principal-content .nav-stacked li a{padding-top:.6em;padding-bottom:.6em}
 .content .contenido #titulo-home{top:48%;}
 .content .contenido #titulo-home div h2{font-size:2.8em;margin:.4em auto .1em .1em}
-.content #informacion-inicio{top:-16.8em;}
-.content #informacion-inicio #owl-proyectos{margin-bottom:3.3em;font-size:1.3em;padding-right:.9em;padding-left:1.5em;}
+.content #informacion-inicio{top:-15em;}
+.content #informacion-inicio #owl-proyectos{margin-bottom:2.7em;font-size:1.3em;padding-right:.9em;padding-left:1.5em;}
 .content #informacion-inicio #owl-proyectos .item .row .imagen-thumb img,.content #informacion-inicio #owl-proyectos .item .row .imagen-thumb .etiqueta{width:125px}
 .content #informacion-empresa{top:-25em;}
 .content #informacion-empresa p{font-size:1.3em}

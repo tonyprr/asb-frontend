@@ -20,6 +20,12 @@ define(['app'], function (app) {
         var $window = $(window).on('resize', function() {
             if ($(window).height() <= 650 && $(window).width() >= 768) {
             } else 
+            if ($(window).height() <= 1000 && $(window).width() >= 1400) {
+                //alert("xxxx");
+                $('#banner').height(
+                    $(window).height() - ($(window).height()*$(window).height()/3100) + 30
+                );    
+            } else 
             if ($(window).width() <= 767) {
                 $('#banner').height(
                         ($(window).height() - $('#header').height() - $('#footer').height() - 20) / 2

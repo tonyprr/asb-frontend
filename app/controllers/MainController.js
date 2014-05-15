@@ -17,7 +17,9 @@ define(['app'], function (app) {
         $scope.mostrarTitulo[4] = false;
         $scope.mostrarTitulo[5] = false;
         $scope.item = 1;
+        $scope.activarTime = true;
 
+           //$("#banner").backstretch("./img/banner/1.jpg");
            $("#banner").backstretch([
                 "./img/banner/1.jpg"
               , "./img/banner/2.jpg"
@@ -26,7 +28,6 @@ define(['app'], function (app) {
               , "./img/banner/5.jpg"
             ], {duration: 6000, fade: 0});          
 
-//           $("#banner").backstretch("./img/banner-portada.jpg");
             var $window = $(window).on('resize', function() {
 //            alert($(window).height())
                 console.log("resize on...");
@@ -74,32 +75,29 @@ define(['app'], function (app) {
 //        $('#banner').addClass('animated fadeIn');
         
             
-            $timeout(function() {
-                setInterval(function() {
-    //                console.log("interval... " + $scope.item);
-                    $scope.mostrarTitulo[$scope.item] = false;
-                    if ($scope.item === 5)
-                        $scope.item = 0;
-                    $scope.item++;
-                    $scope.mostrarTitulo[$scope.item] = true;
-                    $scope.$apply();
-                }, 6000);
-            }, 400, true);
-        
-/*        
         $("#banner").on("backstretch.after", function (e, instance, index) {
           // If we wanted to stop the slideshow after it reached the end
-            $scope.mostrarTitulo[$scope.item] = false;
-            $scope.item++;
-            $scope.mostrarTitulo[$scope.item] = true;
-            console.log("before... " + $scope.item);
 //            if (index === instance.images.length - 1) {
 //                instance.pause();
 //            };
-            if ($scope.item === 5)
-                $scope.item = 0;
+            if ($scope.activarTime)
+            {
+                console.log("activacion time...")
+                $scope.activarTime = false;
+                $timeout(function() {
+                    setInterval(function() {
+        //                console.log("interval... " + $scope.item);
+                        $scope.mostrarTitulo[$scope.item] = false;
+                        if ($scope.item === 5)
+                            $scope.item = 0;
+                        $scope.item++;
+                        $scope.mostrarTitulo[$scope.item] = true;
+                        $scope.$apply();
+                    }, 6000);
+                }, 700, true);
+            }
         });
-*/
+
     }
 
     app.register.controller('MainController', ['$scope', '$location', '$timeout', mainController]);
