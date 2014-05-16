@@ -22,6 +22,7 @@ define(['app'], function (app) {
             } else 
             if ($(window).height() <= 1000 && $(window).width() >= 1400) {
                 //alert("xxxx");
+                console.log("alto: " + $(window).height());
                 $('#banner').height(
                     $(window).height() - ($(window).height()*$(window).height()/3100) + 30
                 );    
@@ -47,7 +48,8 @@ define(['app'], function (app) {
 
 
         function initialize() {
-                var myLatlng = new google.maps.LatLng(-12.1443000,-77.0180000);
+//                var myLatlng = new google.maps.LatLng(-12.1443000,-77.0180000);
+                var myLatlng = new google.maps.LatLng(-12.120689,-77.035840);
                 var mapOptions = {
                         zoom: 17,
                         center: myLatlng,
@@ -61,7 +63,7 @@ define(['app'], function (app) {
                    // '<h2 id="firstHeading" class="firstHeading">Maido Mitsuharu</h2>'+
                     '<div id="bodyContent">'+
                         '<div class="foto_mapa"></div>' +
-                    '<p class="text-marron">Bolognesi 125 Of. 1101<br/>' +
+                    '<p class="text-gris">Bolognesi 125 Of. 1101<br/>' +
                         '	Miraflores - Lima, Perú <br/>' +
                         '	Tele - Fax  241-8724 / 241 8142 <br/>' +
                         '	Email: <a href="mailto:asbcg@asbcontratistas.com">asbcg@asbcontratistas.com</a> </p>'
@@ -74,7 +76,7 @@ define(['app'], function (app) {
 
 
                 var image = 'img/iconos/ico-ASB.png';
-                var myLatLng = new google.maps.LatLng(-12.1443000,-77.0180000);
+                //var myLatLng = new google.maps.LatLng(-12.1443000,-77.0180000);
                 var beachMarker = new google.maps.Marker({
                         position: myLatLng,
                         map: map,
