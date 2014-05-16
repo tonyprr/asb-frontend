@@ -76,9 +76,9 @@ define(['app'], function (app) {
 
 
                 var image = 'img/iconos/ico-ASB.png';
-                //var myLatLng = new google.maps.LatLng(-12.1443000,-77.0180000);
+                //var myLatlng = new google.maps.LatLng(-12.1443000,-77.0180000);
                 var beachMarker = new google.maps.Marker({
-                        position: myLatLng,
+                        position: myLatlng,
                         map: map,
                         title:"ASB Contratistas",
                         animation: google.maps.Animation.DROP,
