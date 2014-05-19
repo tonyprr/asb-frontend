@@ -8,6 +8,7 @@ define(['app'], function (app) {
         $scope.highlight = function (path) {
             return $location.path().substr(0, path.length) == path;
         };
+        $(window).off("resize");
 
         $("#banner").backstretch("./img/banner/empresa.jpg");
         var $window = $(window).on('resize', function() {

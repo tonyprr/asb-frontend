@@ -8,8 +8,6 @@ define(['app'], function (app) {
         $scope.highlight = function (path) {
             return $location.path().substr(0, path.length) == path;
         };
-        $(window).off("resize");
-
         $scope.mostrarTitulo = new Array();
         
         $scope.mostrarTitulo[0] = true;
@@ -21,7 +19,7 @@ define(['app'], function (app) {
         $scope.item = 1;
         $scope.activarTime = true;
 
-        //$("#banner").backstretch("./img/banner/1.jpg");
+           //$("#banner").backstretch("./img/banner/1.jpg");
            $("#banner").backstretch([
                 "./img/banner/1.jpg"
               , "./img/banner/2.jpg"
@@ -44,14 +42,7 @@ define(['app'], function (app) {
                         $(window).height() - $('#header').height() - $('#footer').height() - 65
                     );
                 }
-
-                $("#banner").backstretch([
-                     "./img/banner/1.jpg"
-                   , "./img/banner/2.jpg"
-                   , "./img/banner/3.jpg"
-                   , "./img/banner/4.jpg"
-                   , "./img/banner/5.jpg"
-                 ], {duration: 6000, fade: 0});          
+                
             }).trigger('resize'); //on page load      
     	
           //$('#modalLoading').modal('hide');
@@ -83,13 +74,12 @@ define(['app'], function (app) {
 //        $('#titulo-home').addClass('animated bounceInLeft');
 //        $('#banner').addClass('animated fadeIn');
         
-
-        $("#banner").on("backstretch.before", function (e, instance, index) {
-            $(".backstretch").hide();
-        });
-        
+            
         $("#banner").on("backstretch.after", function (e, instance, index) {
-            $(".backstretch").show("slow");
+          // If we wanted to stop the slideshow after it reached the end
+//            if (index === instance.images.length - 1) {
+//                instance.pause();
+//            };
             if ($scope.activarTime)
             {
                 console.log("activacion time...")

@@ -2,7 +2,8 @@
 
 define(['app'], function (app) {
 
-    var proyectoDetalleController = function ($scope, $rootScope, $stateParams, $filter, $http, $location) {
+    var proyectoDetalleController = function ($scope, $rootScope, $stateParams, $sce, $http, $location,
+                                contenidoService) {
         var appTitle = 'Detalle del Proyecto';
         $scope.appTitle = appTitle;
         $scope.highlight = function (path) {
@@ -24,6 +25,10 @@ define(['app'], function (app) {
             }
             $("#banner").backstretch("./img/banner/arequipa1.jpg");
         }).trigger('resize'); //on page load     
+
+        $scope.deliberatelyTrustDangerousSnippet = function(html) {
+            return $sce.trustAsHtml(html);
+        };        
         
 //        var owl = $("#owl-carousel");
 //        owl.owlCarousel({
@@ -43,10 +48,21 @@ define(['app'], function (app) {
 //
 //        });
 //
+       var load = function() {
+             contenidoService.getById($stateParams.idcont,
+                 function(resp) {
+                    $scope.contenido = resp.data;
+                }
+             );
+     
+        };
+
+        load();
         
         
     };
 
-    app.register.controller('ProyectoDetalleController', ['$scope', '$rootScope', '$stateParams', '$filter', '$http', '$location', proyectoDetalleController]);
+    app.register.controller('ProyectoDetalleController', ['$scope', '$rootScope', '$stateParams', '$sce', '$http', '$location',
+        'contenidoService', proyectoDetalleController]);
     
 });

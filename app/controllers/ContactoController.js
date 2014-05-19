@@ -7,7 +7,9 @@ define(['app'], function (app) {
         $scope.appTitle = appTitle;
         $scope.highlight = function (path) {
             return $location.path().substr(0, path.length) == path;
-        }
+        };
+        $(window).off("resize");
+
         $('#map_canvas').height(360);
 //        var $window = $(window).on('resize', function() {
 //                    $('#map_canvas').height(
@@ -49,7 +51,7 @@ define(['app'], function (app) {
 
         function initialize() {
 //                var myLatlng = new google.maps.LatLng(-12.1443000,-77.0180000);
-                var myLatlng = new google.maps.LatLng(-12.120689,-77.035840);
+                var myLatlng = new google.maps.LatLng(-12.119227,-77.035747);//-12.119227, -77.035747
                 var mapOptions = {
                         zoom: 17,
                         center: myLatlng,
