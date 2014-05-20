@@ -5,9 +5,9 @@
                 <div ng-repeat="imagen in galeriaImagenes | orderBy:'ordenGale':true"
                     class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
                     <div class="item itemsImgProy">
-                        <a href="/asb-backend/web/m_web/files/content/galeria/{{imagen.imagenGale}}">
+                        <a href="{{rootUrl}}/backend/web/m_web/files/content/galeria/{{imagen.imagenGale}}">
                             <img fallback-src="img/sin-imagen.png" 
-                                ng-src="/asb-backend/web/m_web/files/content/galeria/thumb_{{imagen.imagenGale}}" class="img-responsive"/>
+                                ng-src="{{rootUrl}}/backend/web/m_web/files/content/galeria/thumb_{{imagen.imagenGale}}" class="img-responsive"/>
                         </a>
                     </div>
                 </div>

@@ -47,8 +47,20 @@ define(['app'], function (app) {
                             pagination : false,
                             autoPlay : true,
 
-                            autoHeight : true
+                            autoHeight : true,
 
+                            lazyLoad : true,
+
+                            transitionStyle:"fade"
+
+
+                        });
+                        $(".next").click(function(){
+                            owl.trigger('owl.next');
+                        });
+
+                        $(".prev").click(function(){
+                            owl.trigger('owl.prev');
                         });
 
                     }, 900);

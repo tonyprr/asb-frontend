@@ -39,8 +39,8 @@ html {
  }
 
 #titulo-home {
-    -webkit-transition:2.5s linear all;
-    transition:2.5s linear all;    
+    -webkit-transition:3.5s linear all;
+    transition:3.5s linear all;    
     -webkit-animation-duration: 7s;
     -webkit-animation-delay: 0s;
     -webkit-animation-iteration-count: infinite;

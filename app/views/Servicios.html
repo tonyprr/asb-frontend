@@ -26,7 +26,8 @@
                             
                             <div ng-repeat="contenido in contenidos"
                                 class="item">
-                                <img src="img/iconos/servicios-construccion-edificacion.jpg" class="img-responsive"/>
+                                <img fallback-src="img/sin-imagen.png" 
+                                    data-src="{{rootUrl}}/backend/web/m_web/files/content/{{contenido.imagen}}" class=" lazyOwl img-responsive"/>
                                 <div class="etiqueta">
                                     {{contenido.adicional1}}
                                 </div>

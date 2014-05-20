@@ -2,7 +2,7 @@
 
 define(['app'], function (app) {
 
-    var mainController = function ($scope, $location, $timeout) {
+    var mainController = function ($scope, $location, $timeout, contenidoService) {
         var appTitle = 'Home';
         $scope.appTitle = appTitle;
         $scope.highlight = function (path) {
@@ -56,24 +56,6 @@ define(['app'], function (app) {
     	
           //$('#modalLoading').modal('hide');
 
-        var owl = $("#owl-proyectos");
-        owl.owlCarousel({
-            items : 4, //10 items above 1000px browser width
-            itemsDesktop : [1000,3], //5 items between 1000px and 901px
-            itemsDesktopSmall : [900,2], // 3 items betweem 900px and 601px
-            itemsTablet: [600,2], //2 items between 600 and 0;
-            itemsMobile : [500, 1], // itemsMobile disabled - inherit from itemsTablet option
-            
-            slideSpeed : 800,
-            paginationSpeed : 3000,
-
-            pagination : false,
-            autoPlay : true,
-            
-            autoHeight : true
-
-        });
-        
         //owl.trigger('owl.play',3000);
 //        $('.carousel').carousel({
 //            interval: 3000
@@ -108,8 +90,40 @@ define(['app'], function (app) {
             }
         });
 
+       var load = function() {
+             contenidoService.listaContenidos(null, 2,
+                 function(resp) {
+                    $scope.contenidos = resp.data;
+                    $timeout(function() {
+                    
+                        var owl = $("#owl-proyectos");
+                        owl.owlCarousel({
+                            items : 4, //10 items above 1000px browser width
+                            itemsDesktop : [1000,3], //5 items between 1000px and 901px
+                            itemsDesktopSmall : [900,2], // 3 items betweem 900px and 601px
+                            itemsTablet: [600,2], //2 items between 600 and 0;
+                            itemsMobile : [500, 1], // itemsMobile disabled - inherit from itemsTablet option
+
+                            slideSpeed : 800,
+                            paginationSpeed : 3000,
+
+                            pagination : false,
+                            autoPlay : true,
+
+                            autoHeight : true
+
+                        });
+                    }, 900);
+        
+                    
+                }
+             );
+        };
+
+        load();
+
     }
 
-    app.register.controller('MainController', ['$scope', '$location', '$timeout', mainController]);
+    app.register.controller('MainController', ['$scope', '$location', '$timeout', 'contenidoService', mainController]);
     
 });

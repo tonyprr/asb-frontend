@@ -10,30 +10,30 @@
 
         
         <div id="titulo-home" class="row">
-            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12
+            <div class="col-lg-5 col-md-6 col-sm-7 col-xs-12
                  sample-show-hide" ng-show="mostrarTitulo[1]">
-                        <h2>Disfruta en familia 1 </h2>
+                        <h2>Disfruta en familia</h2>
                         <p>Departamentos de 2 y 3 dormitorios</p>
             </div>
-            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12
+            <div class="col-lg-5 col-md-6 col-sm-7 col-xs-12
                  sample-show-hide" ng-show="mostrarTitulo[2]">
-                        <h2>Disfruta en familia 2</h2>
+                        <h2>Vive en Miraflores</h2>
                         <p>Departamentos de 2 y 3 dormitorios</p>
             </div>
-            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12
+            <div class="col-lg-5 col-md-6 col-sm-7 col-xs-12
                  sample-show-hide" ng-show="mostrarTitulo[3]">
-                        <h2>Disfruta en familia 3</h2>
+                        <h2>Vive en Miraflores</h2>
                         <p>Departamentos de 2 y 3 dormitorios</p>
             </div>
-            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12
+            <div class="col-lg-5 col-md-6 col-sm-7 col-xs-12
                  sample-show-hide" ng-show="mostrarTitulo[4]">
-                        <h2>Disfruta en familia 4</h2>
-                        <p>Departamentos de 2 y 3 dormitorios</p>
+                        <h2>SORPRÉNDETE EN MIRAFLORES</h2>
+                        <p>Vista de la Huaca Pucllana</p>
             </div>
-            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12
+            <div class="col-lg-5 col-md-6 col-sm-7 col-xs-12
                  sample-show-hide" ng-show="mostrarTitulo[5]">
-                        <h2>Disfruta en familia 5</h2>
-                        <p>Departamentos de 2 y 3 dormitorios</p>
+                        <h2>CENTROS COMERCIALES SIEMPRE CERCA</h2>
+                        <p>Cambia tu estilo de vida</p>
             </div>
         </div>
         
@@ -45,98 +45,21 @@
     <div id="informacion-inicio">
         <div id="owl-proyectos" class="owl-carousel">
 
-            <div class="item">
+            <div ng-repeat="contenido in contenidos"
+                class="item">
                 <div class="row">
                     <div class="col-xs-5 col-md-5 col-sm-5 imagen-thumb">
-                        <img src="img/iconos/servicios-proyectos.jpg" class="img-responsive"/>
+                        <img fallback-src="img/sin-imagen.png" 
+                            ng-src="{{rootUrl}}/backend/web/m_web/files/content/{{contenido.imagen}}" class="img-responsive"/>
                         <div class="etiqueta">EN VENTA</div>
                     </div>
                     <div class="col-xs-7 col-md-7 col-sm-7 proy-descrip-thumb">
-                        AREQUIPA I <br/>
+                        <span ng-bind="contenido.adicional1"></span><br/>
                         Miraflores
                     </div>
                 </div>
             </div>
-
-            <div class="item">
-                <div class="row">
-                    <div class="col-xs-5 col-md-5 col-sm-5 imagen-thumb">
-                        <img src="img/iconos/servicios-proyectos.jpg" class="img-responsive"/>
-                        <div class="etiqueta">EN VENTA</div>
-                    </div>
-                    <div class="col-xs-7 col-md-7 col-sm-7 proy-descrip-thumb">
-                        AREQUIPA I <br/>
-                        Miraflores
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="row">
-                    <div class="col-xs-5 col-md-5 col-sm-5 imagen-thumb">
-                        <img src="img/iconos/servicios-proyectos.jpg" class="img-responsive"/>
-                        <div class="etiqueta">EN VENTA</div>
-                    </div>
-                    <div class="col-xs-7 col-md-7 col-sm-7 proy-descrip-thumb">
-                        AREQUIPA I <br/>
-                        Miraflores
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="row">
-                    <div class="col-xs-5 col-md-5 col-sm-5 imagen-thumb">
-                        <img src="img/iconos/servicios-proyectos.jpg" class="img-responsive"/>
-                        <div class="etiqueta">EN VENTA</div>
-                    </div>
-                    <div class="col-xs-7 col-md-7 col-sm-7 proy-descrip-thumb">
-                        AREQUIPA I <br/>
-                        Miraflores
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="row">
-                    <div class="col-xs-5 col-md-5 col-sm-5 imagen-thumb">
-                        <img src="img/iconos/servicios-proyectos.jpg" class="img-responsive"/>
-                        <div class="etiqueta">EN VENTA</div>
-                    </div>
-                    <div class="col-xs-7 col-md-7 col-sm-7 proy-descrip-thumb">
-                        AREQUIPA I <br/>
-                        Miraflores
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="row">
-                    <div class="col-xs-5 col-md-5 col-sm-5 imagen-thumb">
-                        <img src="img/iconos/servicios-proyectos.jpg" class="img-responsive"/>
-                        <div class="etiqueta">EN VENTA</div>
-                    </div>
-                    <div class="col-xs-7 col-md-7 col-sm-7 proy-descrip-thumb">
-                        AREQUIPA I <br/>
-                        Miraflores
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="row">
-                    <div class="col-xs-5 col-md-5 col-sm-5 imagen-thumb">
-                        <img src="img/iconos/servicios-proyectos.jpg" class="img-responsive"/>
-                        <div class="etiqueta">EN VENTA</div>
-                    </div>
-                    <div class="col-xs-7 col-md-7 col-sm-7 proy-descrip-thumb">
-                        AREQUIPA I <br/>
-                        Miraflores
-                    </div>
-                </div>
-            </div>
-
-
+            
         </div>
         
         <div ng-include="'views/infoEmpresa.html'">
