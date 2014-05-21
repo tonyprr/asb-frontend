@@ -47,11 +47,11 @@ define(['app'], function (app) {
                             pagination : false,
                             autoPlay : true,
 
-                            autoHeight : true,
+                            autoHeight : true
 
-                            lazyLoad : true,
+                            //lazyLoad : true
 
-                            transitionStyle:"fade"
+                            //transitionStyle:"fade"
 
 
                         });

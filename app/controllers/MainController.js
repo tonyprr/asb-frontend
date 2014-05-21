@@ -18,6 +18,7 @@ define(['app'], function (app) {
         $scope.mostrarTitulo[3] = false;
         $scope.mostrarTitulo[4] = false;
         $scope.mostrarTitulo[5] = false;
+        $scope.mostrarTitulo[6] = false;
         $scope.item = 1;
         $scope.activarTime = true;
 
@@ -28,6 +29,7 @@ define(['app'], function (app) {
               , "./img/banner/3.jpg"
               , "./img/banner/4.jpg"
               , "./img/banner/5.jpg"
+              , "./img/banner/6.jpg"
             ], {duration: 6000, fade: 0});          
 
             var $window = $(window).on('resize', function() {
@@ -51,6 +53,7 @@ define(['app'], function (app) {
                    , "./img/banner/3.jpg"
                    , "./img/banner/4.jpg"
                    , "./img/banner/5.jpg"
+                   , "./img/banner/6.jpg"
                  ], {duration: 6000, fade: 0});          
             }).trigger('resize'); //on page load      
     	
@@ -80,13 +83,13 @@ define(['app'], function (app) {
                     setInterval(function() {
         //                console.log("interval... " + $scope.item);
                         $scope.mostrarTitulo[$scope.item] = false;
-                        if ($scope.item === 5)
+                        if ($scope.item === 6)
                             $scope.item = 0;
                         $scope.item++;
                         $scope.mostrarTitulo[$scope.item] = true;
                         $scope.$apply();
                     }, 6000);
-                }, 700, true);
+                }, 500, true);
             }
         });
 

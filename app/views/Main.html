@@ -25,15 +25,20 @@
                         <h2>Vive en Miraflores</h2>
                         <p>Departamentos de 2 y 3 dormitorios</p>
             </div>
-            <div class="col-lg-5 col-md-6 col-sm-7 col-xs-12
+            <div class="col-lg-7 col-md-8 col-sm-9 col-xs-12
                  sample-show-hide" ng-show="mostrarTitulo[4]">
                         <h2>SORPRÉNDETE EN MIRAFLORES</h2>
                         <p>Vista de la Huaca Pucllana</p>
             </div>
-            <div class="col-lg-5 col-md-6 col-sm-7 col-xs-12
+            <div class="col-lg-8 col-md-9 col-sm-10 col-xs-12
                  sample-show-hide" ng-show="mostrarTitulo[5]">
                         <h2>CENTROS COMERCIALES SIEMPRE CERCA</h2>
                         <p>Cambia tu estilo de vida</p>
+            </div>
+            <div class="col-lg-8 col-md-9 col-sm-10 col-xs-12
+                 sample-show-hide" ng-show="mostrarTitulo[6]">
+                        <h2>Vive en Miraflores</h2>
+                        <p>Departamentos de 2 y 3 dormitorios</p>
             </div>
         </div>
         
@@ -49,12 +54,15 @@
                 class="item">
                 <div class="row">
                     <div class="col-xs-5 col-md-5 col-sm-5 imagen-thumb">
-                        <img fallback-src="img/sin-imagen.png" 
-                            ng-src="{{rootUrl}}/backend/web/m_web/files/content/{{contenido.imagen}}" class="img-responsive"/>
+                        <a ui-sref="public.proyecto_detalle({ idcont: contenido.idcontent })">
+                            <img fallback-src="img/sin-imagen.png" 
+                                ng-src="{{rootUrl}}/backend/web/m_web/files/content/{{contenido.imagen}}" class="img-responsive"/>
+                        </a>
                         <div class="etiqueta">EN VENTA</div>
                     </div>
                     <div class="col-xs-7 col-md-7 col-sm-7 proy-descrip-thumb">
-                        <span ng-bind="contenido.adicional1"></span><br/>
+                        <a ui-sref="public.proyecto_detalle({ idcont: contenido.idcontent })" ng-bind="contenido.adicional1">
+                        </a><br/>
                         Miraflores
                     </div>
                 </div>

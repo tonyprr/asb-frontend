@@ -38,7 +38,11 @@ define(['app'], function (app) {
                         $(window).height() - $('#header').height() - $('#footer').height() - 70
                         //2*($(window).height() - $('#header').height() - $('#footer').height())/3 + 44
                 );    
-            }  else {
+            }  else if ($(window).height() <= 1000 && $(window).width() > 1280) {
+                $('#banner').height(
+                    $(window).height() - ($(window).height()*$(window).height()/3100) + 30
+                );    
+            } else {
                     $('#banner').height(
                             2*($(window).height() - $('#header').height() - $('#footer').height() - 15)/3
                     );    
