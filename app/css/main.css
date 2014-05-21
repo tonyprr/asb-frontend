@@ -81,6 +81,7 @@ footer h3 a{color:#fff !important}
 .content #informacion-inicio,.content #informacion-contactos{padding:0}
 .content #informacion-empresa{margin-right:.9em;}
 .content #informacion-empresa #carousel-empresa{border:7px solid #dedede}
+.content #informacion-proyectos{text-align:left;}
 .content #informacion-proyectos h5{font-weight:bold}
 .content #informacion-proyectos a{color:#656565 !important}
 .content #informacion-proyectos .nav-pills > li > a{border:1px solid #bababa !important;color:#656565 !important;border-radius:none;margin-right:.5em}

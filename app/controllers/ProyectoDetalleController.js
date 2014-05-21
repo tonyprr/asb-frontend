@@ -10,6 +10,8 @@ define(['app'], function (app) {
             return $location.path().substr(0, path.length) == path;
         };
 
+        $(window).off("resize");
+        
         $("#banner").backstretch("./img/banner/arequipa1.jpg");
         var $window = $(window).on('resize', function() {
             if ($(window).height() <= 650 && $(window).width() >= 768) {
