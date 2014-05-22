@@ -29,7 +29,7 @@ ul.nav-stacked li a{padding:.4em .3em .3em .1em}
 #panelMenuHeader{position:absolute;z-index:999;width:100%;margin:0;padding:0;}
 #panelMenuHeader .menu-principal{position:relative;padding:0 !important;margin-right:0 !important;margin-top:.8em}
 .menu-principal-movil{background-color:#fff;padding:.2em 0;position:absolute;top:0;margin:0;width:100%;z-index:20;}
-.menu-principal-movil #logo-small img{height:35px}
+.menu-principal-movil #logo-small img{height:45px}
 .menu-principal .iconos-social{float:right;margin:1em .6em 3.5em 0}
 .iconos-footer .iconos-social{float:none;margin:1em auto 5em auto}
 .nav-pills > li > a{border-radius:0 !important}
@@ -106,7 +106,7 @@ nav{display:none !important}
 .content #info-empresa div a{text-align:center;color:#000}
 .content #titulo-home{margin-left:.1em;position:relative;top:50%;}
 .content #titulo-home div{padding:0 1em .5em 1.1em;}
-.content #titulo-home div h2{font-size:1.7em}
+.content #titulo-home div h2{font-size:1.9em}
 .content #titulo-home div p{font-size:1em}
 .content #lista-proyectos{padding:.2em 1.5em .2em .7em;}
 .content #lista-proyectos .col-xs-6{padding-right:0;margin-right:0;}
