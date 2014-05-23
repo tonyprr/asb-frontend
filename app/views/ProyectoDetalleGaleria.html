@@ -3,13 +3,11 @@
             <div class="row">
                 
                 <div ng-repeat="imagen in galeriaImagenes | orderBy:'ordenGale':true"
-                    class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
-                    <div class="item itemsImgProy">
-                        <a href="{{rootUrl}}/backend/web/m_web/files/content/galeria/{{imagen.imagenGale}}">
+                    class="col-xs-6 col-sm-3 col-md-3 col-lg-2 itemsImgProy center-block">
+                        <a href="{{rootUrl}}/backend/web/m_web/files/content/galeria/{{imagen.imagenGale}}" class="text-center">
                             <img fallback-src="img/sin-imagen.png" 
-                                ng-src="{{rootUrl}}/backend/web/m_web/files/content/galeria/thumb_{{imagen.imagenGale}}" class="img-responsive" height="133" />
+                                ng-src="{{rootUrl}}/backend/web/m_web/files/content/galeria/thumb_{{imagen.imagenGale}}" class="text-center"/>
                         </a>
-                    </div>
                 </div>
                 
             </div>

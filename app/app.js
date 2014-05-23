@@ -68,7 +68,9 @@ define(['services/routeResolver'], function () {
                 .state('public.empresa', route.resolve('/empresa', 'Empresa'))
                 .state('public.proyectos', route.resolve('/proyectos', 'Proyectos'))
                 .state('public.proyecto_detalle', route.resolve('/proyecto-detalle/:idcont', 'ProyectoDetalle'))
-                .state('public.proyecto_detalle.imagenes', route.resolve('/proyecto-detalle-galeria/:tipo', 'ProyectoDetalleGaleria'))
+                .state('public.proyecto_detalle.imagenes', route.resolve('/galeria/:tipo', 'ProyectoDetalleGaleria'))
+                .state('public.proyecto_detalle.mapa', route.resolve('/mapa', 'ProyectoDetalleMapa'))
+                .state('public.proyecto_detalle.video', route.resolve('/video', 'ProyectoDetalleVideo'))
                 .state('public.servicios', route.resolve('/servicios', 'Servicios'))
 
             // Anonymous routes

@@ -6,6 +6,7 @@ define(['app'], function (app) {
                                 contenidoService) {
         var appTitle = 'Detalle del Proyecto';
         $scope.appTitle = appTitle;
+        $scope.contenido = {};
         $scope.highlight = function (path) {
             return $location.path().substr(0, path.length) == path;
         };
