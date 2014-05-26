@@ -22,6 +22,7 @@ require(
         'directives/accessLevel',
         'directives/fbLike',
         'directives/fallbackSrc',
+        'directives/ngVideo',
         'filters/parserDate',
         'controllers/InitController'
     ],

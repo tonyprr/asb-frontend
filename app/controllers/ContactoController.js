@@ -29,10 +29,15 @@ define(['app'], function (app) {
                     $(window).height() - ($(window).height()*$(window).height()/3100) + 30
                 );    
             } else 
+            if ($(window).width() <= 800 && $(window).height() >= 700) {
+                    $('#banner').height(
+                            2*($(window).height() - $('#header').height() - $('#footer').height())/3
+                    );    
+            } else 
             if ($(window).width() <= 767) {
-                $('#banner').height(
-                        ($(window).height() - $('#header').height() - $('#footer').height() - 20) / 2
-                );    
+                    $('#banner').height(
+                        $(window).height() - $('#header').height() - $('#footer').height() - 140
+                    );
             } else if ($(window).width() <= 1280) {
                 $('#banner').height(
                         $(window).height() - $('#header').height() - $('#footer').height() - 70

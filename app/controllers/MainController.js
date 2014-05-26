@@ -39,7 +39,7 @@ define(['app'], function (app) {
                 } else 
                 if ($(window).width() <= 767) {
                     $('#banner').height(
-                        ($(window).height() - $('#header').height() - $('#footer').height() - 90) / 2
+                        $(window).height() - $('#header').height() - $('#footer').height() - 125
                     );
                 } else {
                     $('#banner').height(

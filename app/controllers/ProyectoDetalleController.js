@@ -17,10 +17,15 @@ define(['app'], function (app) {
         var $window = $(window).on('resize', function() {
             if ($(window).height() <= 650 && $(window).width() >= 768) {
             } else 
+            if ($(window).width() <= 800 && $(window).height() >= 700) {
+                    $('#banner').height(
+                            2*($(window).height() - $('#header').height() - $('#footer').height())/3
+                    );    
+            } else 
             if ($(window).width() <= 767) {
-                $('#banner').height(
-                        ($(window).height() - $('#header').height() - $('#footer').height() - 20) / 2
-                );    
+                    $('#banner').height(
+                        $(window).height() - $('#header').height() - $('#footer').height() - 125
+                    );
             } else {
                 $('#banner').height(
                         $(window).height() - $('#header').height() - $('#footer').height() - 40

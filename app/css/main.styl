@@ -131,20 +131,23 @@ ul.nav-stacked
 
 .menu-principal-movil
 	background-color white
+	background-image url(../img/iconos/barra-tablet.jpg)
+	background-position bottom
 	padding 0.2em 0 0 0
 	position absolute
 	top 0
 	margin 0
 	width 100%
 	z-index 20
+	height 65px
 	#logo-small
+		height 62px
+		width 155px
+		background-image url(../img/iconos/logo-tablet.png)
+		background-repeat none
+	#simple-menu
 		img
-			height 45px
-	hr
-		padding 0
-		margin 0
-		height 0
-		border 0.07em solid gris_claro
+			padding-top 1.1em !important
 
 
 .menu-principal
@@ -438,14 +441,39 @@ footer
 @media screen and (max-width:320px )
 	nav
 		display none !important
+	.content
+		#titulo-home
+			div
+				h2
+					font-size 1.4em
+
 	footer
 		.links
 			display none !important
+
+@media screen and (max-width:460px )
+	.menu-principal-movil
+		background-image url(../img/iconos/barra-celular.jpg)
+		height 47px
+		#logo-small
+			height 39px
+			width 105px
+			background-image url(../img/iconos/logo-celula.png)
+		#simple-menu
+			img
+				padding-top 0.8em !important
 
 
 @media screen and (max-width:420px ) and (min-width:321px ) 
 	nav
 		display none !important
+	.content
+		#titulo-home
+			div
+				h2
+					font-size 1.4em
+
+
 
 
 @media screen and (max-width:639px ) and (min-width:421px )
@@ -469,10 +497,11 @@ footer
 		margin-bottom 40px
 		#info-empresa
 			margin-top 0.6em
+			width 100%
 			div
 				text-align center !important
 				line-height 22px
-				padding 0.2em
+				padding 0.2em 0 0.2em 1.4em
 				a
 					text-align center
 					color black
@@ -480,9 +509,10 @@ footer
 		#titulo-home
 			margin-left 0.1em
 			position relative
-			top 50%
+			top 30%
 			div
 				padding 0 1em 0.5em 1.1em
+				height 7.4em
 				h2
 					font-size 1.9em
 				p
@@ -517,9 +547,11 @@ footer
 				font-size 2.4em
 		#informacion-inicio
 			padding 0
-			top 0
+			top -6em
+			#owl-proyectos
+				margin-bottom 1.2em
 		#informacion-empresa
-			top -4em
+			top -13.8em
 			#carousel-empresa
 				max-width 310px
 				.carousel-inner
@@ -527,7 +559,7 @@ footer
 						width 100%
 		#informacion-proyectos
 			padding 0 0.2em
-			top -8em
+			top -13.8em
 			h2
 				margin-left 0.1em
 			.nav-pills
@@ -536,7 +568,7 @@ footer
 				li
 					padding-bottom 0.6em
 		#informacion-servicios
-			top -8em
+			top -13.8em
 			#lista-servicios
 				padding-right 1.7em
 			.item
@@ -544,7 +576,7 @@ footer
 				border 14px gris_claro solid
 		#informacion-contactos
 			padding 0
-			top -8em
+			top -12.8em
 			.contacto-panel
 				padding 0 1.3em
 
@@ -714,7 +746,7 @@ footer
 				height 150%
 
 				
-@media screen and (max-width: 800px) and (min-height: 1024px)
+@media screen and (max-width: 800px) and (min-height:  700px)
 	.simple-menu
 		display block
 	.overlay-menu
@@ -763,8 +795,6 @@ footer
 				margin-top 2em
 				margin-left 0
 				width 100%
-		#owl-proyectos
-			margin-top 1.5em
 
 		#informacion-inicio
 		#informacion-empresa
@@ -773,21 +803,24 @@ footer
 			padding 0 22px
 		#informacion-inicio
 			padding 0
-			top 0
+			top -11.4em
+			#owl-proyectos
+				margin-bottom 1.4em
 		#informacion-empresa
-			top -4em
+			top -22em
 		#informacion-proyectos
 			padding 0
-			top -8em
+			top -22em
 			h2
 				margin-left 0.4em
 			.nav-pills
 				font-size 0.8em !important
 		#informacion-servicios
-			top -8em
+			top -22em
 		#informacion-contactos
 			padding 0
-			top -8em
+			top -21.2em
 			.contacto-panel
 				padding 0 1.3em
+
 
