@@ -14,10 +14,10 @@
             <li ng-class="{'active' : tabActivo === 1}">
                 <a ui-sref="public.proyecto_detalle" ng-click="tabActivo = 1">DESCRIPCIÓN</a>
             </li>
-            <li ng-class="{'active' : tabActivo === 4}">
-                <a ui-sref="public.proyecto_detalle.mapa" ng-click="tabActivo = 4">MAPA</a>
+            <li ng-class="{'active' : tabActivo === 4}" ng-show="contenido.imagen2">
+                <a ui-sref="public.proyecto_detalle.mapa" ng-click="tabActivo = 4">UBICACIÓN</a>
             </li>
-            <li ng-class="{'active' : tabActivo === 5}">
+            <li ng-class="{'active' : tabActivo === 5}" ng-show="contenido.url">
                 <a ui-sref="public.proyecto_detalle.video" ng-click="tabActivo = 5">VIDEO</a>
             </li>
           <li ng-class="{'active' : tabActivo === 2}">
