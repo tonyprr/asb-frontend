@@ -21,6 +21,10 @@ define(['app'], function (app) {
                                 mainClass: 'mfp-img-mobile',
                                 gallery: {
                                         enabled: true,
+                                        arrowMarkup: '<a alt="%title%" class="mfp-flecha-%dir%"><img src="img/iconos/flechas-%dir%.png"></a>', // markup of an arrow button
+                                        tPrev: 'Atrás', // Alt text on left arrow
+                                        tNext: 'Siguiente', // Alt text on right arrow
+                                        tCounter: '<span class="mfp-counter">%curr% de %total%</span>',
                                         navigateByImgClick: true,
                                         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
                                 },
