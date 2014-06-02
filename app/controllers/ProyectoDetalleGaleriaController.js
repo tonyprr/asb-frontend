@@ -21,7 +21,8 @@ define(['app'], function (app) {
                                 mainClass: 'mfp-img-mobile',
                                 gallery: {
                                         enabled: true,
-                                        arrowMarkup: '<a alt="%title%" class="mfp-flecha-%dir%"><img src="img/iconos/flechas-%dir%.png"></a>', // markup of an arrow button
+                                        arrowMarkup: '<img alt="%title%" class="mfp-arrow mfp-arrow-%dir%" src="img/iconos/flechas-%dir%.png">', // markup of an arrow button
+//                                        arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', // markup of an arrow button                                        
                                         tPrev: 'Atrás', // Alt text on left arrow
                                         tNext: 'Siguiente', // Alt text on right arrow
                                         tCounter: '<span class="mfp-counter">%curr% de %total%</span>',

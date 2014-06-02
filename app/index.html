@@ -38,7 +38,7 @@
             </div>
             <div class="col-xs-2">
                 <div class="text-right right">
-                    <a id="simple-menu" href="#" class="right" onclick="clickEvent();"
+                    <a id="simple-menu" href="" class="right" onclick="clickEvent();"
                         >
                         <img src="img/iconos/barras_mobil.png">
                     </a>
@@ -50,25 +50,25 @@
         <div id="sidr" class="nav-mobile" >   
           <ul>
             <li ng-class="{'active' : isActiveMenu('/')}"
-                ng-click="selectMenu('/');" onclick="toggleMenu();" ui-sref="public.home">
-                <a href="">INICIO</a>
+                ng-click="selectMenu('/');" onclick="toggleMenu();">
+                <a class="btn-block" ui-sref="public.home">INICIO</a>
             </li>
 
             <li ng-class="{'active' : isActiveMenu('/empresa')}"
-                ng-click="selectMenu('/empresa')" onclick="toggleMenu();" ui-sref="public.empresa">
-                <a href="">EMPRESA</a>
+                ng-click="selectMenu('/empresa')" onclick="toggleMenu();">
+                <a class="btn-block" ui-sref="public.empresa">EMPRESA</a>
             </li>
             <li ng-class="{'active' : isActiveMenu('/proyectos') || isActiveMenu('/proyecto-detalle')}"
-                ng-click="selectMenu('/proyectos')" onclick="toggleMenu();" ui-sref="public.proyectos">
-                <a href="">PROYECTOS</a>
+                ng-click="selectMenu('/proyectos')" onclick="toggleMenu();" >
+                <a class="btn-block" ui-sref="public.proyectos">PROYECTOS</a>
             </li>
             <li ng-class="{'active' : isActiveMenu('/servicios')}"
-                ng-click="selectMenu('/servicios')" onclick="toggleMenu();" ui-sref="public.servicios">
-                <a href="">SERVICIOS</a>
+                ng-click="selectMenu('/servicios')" onclick="toggleMenu();">
+                <a class="btn-block" ui-sref="public.servicios">SERVICIOS</a>
             </li>
             <li ng-class="{'active' : isActiveMenu('/contacto')}"
-                ng-click="selectMenu('/contacto')" onclick="toggleMenu();" ui-sref="public.contacto">
-                <a href="">CONTÁCTENOS</a>
+                ng-click="selectMenu('/contacto')" onclick="toggleMenu();" >
+                <a class="btn-block" ui-sref="public.contacto">CONTÁCTENOS</a>
             </li>
           </ul>
         </div>

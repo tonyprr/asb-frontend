@@ -19,6 +19,14 @@ define(['app'], function (app) {
         initialize();
 
         $("#banner").backstretch("./img/banner/contactenos.jpg");
+        $("#banner").on("backstretch.before", function (e, instance, index) {
+            $(".backstretch").hide();
+        });
+        
+        $("#banner").on("backstretch.after", function (e, instance, index) {
+            $(".backstretch").show("slow");
+        });
+
         var $window = $(window).on('resize', function() {
             if ($(window).height() <= 650 && $(window).width() >= 768) {
             } else 
