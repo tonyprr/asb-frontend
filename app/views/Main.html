@@ -58,7 +58,9 @@
                             <img fallback-src="img/sin-imagen.png" 
                                 ng-src="{{rootUrl}}/backend/web/m_web/files/content/{{contenido.imagen}}" class="img-responsive"/>
                         </a>
-                        <div class="etiqueta">EN VENTA</div>
+                        <div 
+                            ng-class="{true: 'etiqueta', false: 'etiqueta fondo-gris' }[contenido.idcontcate == 6]"
+                            ng-bind="contenido.nameCate"></div>
                     </div>
                     <div class="col-xs-7 col-md-7 col-sm-7 proy-descrip-thumb">
                         <a ui-sref="public.proyecto_detalle({ idcont: contenido.idcontent })" ng-bind="contenido.adicional1">

@@ -9,8 +9,20 @@
     </div>
     
 <div id="informacion-proyectos" class="">
-    <h2 class="titulo" ng-bind="contenido.adicional1">  </h2>
-        <ul class="nav nav-pills" ng-init="tabActivo = 1">
+
+        <h2 class="titulo" ng-bind="contenido.adicional1">  </h2>
+        
+        <div class="row"
+            ng-show="contenido.contcate.idcontcate == 13">
+            <div class="col-md-offset-2 col-md-8" >
+                <img fallback-src="img/sin-imagen.png" 
+                    ng-src="{{rootUrl}}/backend/web/m_web/files/content/{{contenido.adjunto}}" 
+                        class="img-responsive text-center"/>
+            </div>   
+        </div>
+
+        <ul class="nav nav-pills" ng-init="tabActivo = 1" 
+            ng-show="contenido.contcate.idcontcate != 13">
             <li ng-class="{'active' : tabActivo === 1}">
                 <a ui-sref="public.proyecto_detalle" ng-click="tabActivo = 1">DESCRIPCIÓN</a>
             </li>
@@ -28,7 +40,8 @@
           </li>
         </ul>
         <br/>
-        <div id="detalle-proyecto">
+        <div id="detalle-proyecto" 
+            ng-show="contenido.contcate.idcontcate != 13">
             <div ui-view>
             
                 <div class="row">
@@ -61,6 +74,8 @@
                 </div>            
             </div>                            
 	</div>
+
+
 
     <div ng-include="'views/infoEmpresa.html'">
 
