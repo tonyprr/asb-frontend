@@ -56,7 +56,7 @@ define(['app'], function (app) {
                    , "./img/banner/6.jpg"
                  ], {duration: 6000, fade: 0});          
             }).trigger('resize'); //on page load      
-    	
+//            $(".backstretch > img").addClass('img-hide');
           //$('#modalLoading').modal('hide');
 
         //owl.trigger('owl.play',3000);
@@ -107,8 +107,12 @@ define(['app'], function (app) {
                             itemsTablet: [600,2], //2 items between 600 and 0;
                             itemsMobile : [500, 1], // itemsMobile disabled - inherit from itemsTablet option
 
-                            slideSpeed : 800,
+//                            scrollPerPage: true,
+                            slideSpeed : 300,
                             paginationSpeed : 3000,
+//                            rewindSpeed: 11,
+                            lazyEffect: false,
+                            transitionStyle : false,
 
                             pagination : false,
                             autoPlay : true,
@@ -116,7 +120,7 @@ define(['app'], function (app) {
                             autoHeight : true
 
                         });
-                    }, 900);
+                    }, 1300);
         
                     
                 }

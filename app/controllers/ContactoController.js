@@ -85,7 +85,7 @@ define(['app'], function (app) {
                     '<p class="text-gris">Bolognesi 125 Of. 1101<br/>' +
                         '	Miraflores - Lima, Perú <br/>' +
                         '	Tele - Fax  241-8724 / 241 8142 <br/>' +
-                        '	Email: <a href="mailto:asbcg@asbcontratistas.com">asbcg@asbcontratistas.com</a> </p>'
+                        '	Email: <a href="mailto:asbcg@speedy.com.pe">asbcg@speedy.com.pe</a> </p>'
                    '</div>'+
                     '</div>';
 

@@ -119,7 +119,7 @@ nav{display:none !important}
 .content #titulo-home div p{font-size:1em}
 .content #lista-proyectos{padding:.2em 1.5em .2em .7em;}
 .content #lista-proyectos .col-xs-6{padding-right:0;margin-right:0;}
-.content #lista-proyectos .col-xs-6 .item{margin:.5em 0}
+.content #lista-proyectos .col-xs-6 .item{margin:.5em 0;font-size:.8em}
 .content .contenido .banner{position:relative;margin-top:2em;margin-left:0;width:100%}
 .content #owl-proyectos{margin-top:1.5em;padding-left:1.7em;padding-right:.3em}
 .content #informacion-inicio,.content #informacion-empresa,.content #informacion-proyectos,.content #informacion-servicios,.content #informacion-contactos{padding:0 .5em 0 1.5em;}

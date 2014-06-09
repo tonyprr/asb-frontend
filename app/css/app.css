@@ -57,10 +57,10 @@ html {
 }
 
 .sample-show-hide.ng-hide-remove {
-  -webkit-transition:all linear 1s;
-  -moz-transition:all linear 1s;
-  -o-transition:all linear 1s;
-  transition:all linear 1s;
+  -webkit-transition:all linear 2s;
+  -moz-transition:all linear 2s;
+  -o-transition:all linear 2s;
+  transition:all linear 2s;
   display:block!important;
 }
 
@@ -74,3 +74,10 @@ html {
   opacity:1;
 }
 
+.img-hide {
+  -webkit-transition:all linear 2s;
+  -moz-transition:all linear 2s;
+  -o-transition:all linear 2s;
+  transition:all linear 2s;
+  display:block!important;
+}
