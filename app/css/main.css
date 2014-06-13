@@ -27,6 +27,10 @@ ul.nav-stacked li a{padding:.4em .3em .3em .1em}
 .prev:hover{background-image:url("../img/iconos/flechas-sobre.png")}
 .next{background-image:url("../img/iconos/flechas.png");border-radius:0;height:57px;cursor:pointer;background-position:bottom right;margin-top:5em;width:40px}
 .next:hover{background-image:url("../img/iconos/flechas-sobre.png")}
+.prevProy{display:inline;position:absolute;left:0;background-image:url("../img/iconos/flechas.png");border-radius:0;height:57px;cursor:pointer;background-position:bottom left;margin-top:3em;width:40px;z-index:999999}
+.prevProy:hover{background-image:url("../img/iconos/flechas-sobre.png")}
+.nextProy{position:absolute;right:0;background-image:url("../img/iconos/flechas.png");border-radius:0;height:57px;cursor:pointer;background-position:bottom right;margin-top:3em;width:40px;z-index:999999}
+.nextProy:hover{background-image:url("../img/iconos/flechas-sobre.png")}
 #panelMenuHeader{position:absolute;z-index:999;width:100%;margin:0;padding:0;}
 #panelMenuHeader .menu-principal{position:relative;padding:0 !important;margin-right:0 !important;margin-top:.8em}
 .menu-principal-movil{background-color:#fff;background-image:url("../img/iconos/barra-tablet.jpg");background-position:bottom;padding:.2em 0 0 0;position:absolute;top:0;margin:0;width:100%;z-index:20;height:65px;}
@@ -121,7 +125,8 @@ nav{display:none !important}
 .content #lista-proyectos .col-xs-6{padding-right:0;margin-right:0;}
 .content #lista-proyectos .col-xs-6 .item{margin:.5em 0;font-size:.8em}
 .content .contenido .banner{position:relative;margin-top:2em;margin-left:0;width:100%}
-.content #owl-proyectos{margin-top:1.5em;padding-left:1.7em;padding-right:.3em}
+.content #owl-proyectos{margin-top:1.5em;padding-left:1.7em;padding-right:.3em;}
+.content #owl-proyectos .item .row .proy-descrip-thumb{font-size:.9em}
 .content #informacion-inicio,.content #informacion-empresa,.content #informacion-proyectos,.content #informacion-servicios,.content #informacion-contactos{padding:0 .5em 0 1.5em;}
 .content #informacion-inicio .titulo,.content #informacion-empresa .titulo,.content #informacion-proyectos .titulo,.content #informacion-servicios .titulo,.content #informacion-contactos .titulo{font-size:2.4em}
 .content #informacion-inicio{padding:0;top:-6em;}
@@ -142,7 +147,8 @@ nav{display:none !important}
 .content .contenido #titulo-home div h2{font-size:2em;margin:.2em auto .1em .1em}
 .content #info-empresa{font-size:1em}
 .content #informacion-inicio{top:-12.2em;}
-.content #informacion-inicio #owl-proyectos{margin-bottom:1.8em}
+.content #informacion-inicio #owl-proyectos{margin-bottom:1.8em;}
+.content #informacion-inicio #owl-proyectos .item .row .proy-descrip-thumb{font-size:.9em}
 .content #informacion-inicio{padding-left:3.6em;top:-11em}
 .content #informacion-empresa,.content #informacion-proyectos,.content #informacion-servicios{top:-23em}
 .content #informacion-contactos{top:-24em;}
@@ -163,6 +169,7 @@ nav{display:none !important}
 .content #informacion-inicio{top:-15em;}
 .content #informacion-inicio #owl-proyectos{margin-bottom:2.7em;font-size:1.3em;padding-right:.9em;padding-left:1.5em;}
 .content #informacion-inicio #owl-proyectos .item .row .imagen-thumb img,.content #informacion-inicio #owl-proyectos .item .row .imagen-thumb .etiqueta{width:125px}
+.content #informacion-inicio #owl-proyectos .item .row .proy-descrip-thumb{font-size:1em}
 .content #informacion-empresa{top:-25em;}
 .content #informacion-empresa p{font-size:1.3em}
 .content #informacion-empresa #carousel-empresa .carousel-inner img{width:100%}

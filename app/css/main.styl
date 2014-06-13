@@ -121,6 +121,37 @@ ul.nav-stacked
 .next:hover
 	background-image url(../img/iconos/flechas-sobre.png)
 
+.prevProy
+	display inline
+	position absolute
+	left 0
+	background-image url(../img/iconos/flechas.png)
+	border-radius 0
+	height 57px
+	cursor pointer
+	background-position bottom left
+	margin-top 3em
+	width 40px
+	z-index 999999
+.prevProy:hover
+	background-image url(../img/iconos/flechas-sobre.png)
+
+
+.nextProy
+	position absolute
+	right 0
+	background-image url(../img/iconos/flechas.png)
+	border-radius 0
+	height 57px
+	cursor pointer
+	background-position bottom right
+	margin-top 3em
+	width 40px
+	z-index 999999
+.nextProy:hover
+	background-image url(../img/iconos/flechas-sobre.png)
+
+
 #panelMenuHeader
 	position absolute
 	z-index 999
@@ -543,6 +574,10 @@ footer
 			margin-top 1.5em
 			padding-left 1.7em
 			padding-right 0.3em
+			.item
+				.row
+					.proy-descrip-thumb
+						font-size 0.9em
 
 		#informacion-inicio
 		#informacion-empresa
@@ -603,6 +638,10 @@ footer
 			top -12.2em
 			#owl-proyectos
 				margin-bottom 1.8em
+				.item
+					.row
+						.proy-descrip-thumb
+							font-size 0.9em
 		#informacion-inicio
 			padding-left 3.6em
 			top -11em
@@ -683,6 +722,8 @@ footer
 							img
 							.etiqueta
 								width 125px
+						.proy-descrip-thumb
+							font-size 1em
 		#informacion-empresa
 			top -25em
 			p

@@ -4,6 +4,7 @@ define(['app'], function (app) {
 
     var mainController = function ($scope, $location, $timeout, contenidoService) {
         var appTitle = 'Home';
+        var owl = null;
         $scope.appTitle = appTitle;
         $scope.highlight = function (path) {
             return $location.path().substr(0, path.length) == path;
@@ -99,8 +100,8 @@ define(['app'], function (app) {
                     $scope.contenidos = resp.data;
                     $timeout(function() {
                     
-                        var owl = $("#owl-proyectos");
-                        owl.owlCarousel({
+                        var owl1 = $("#owl-proyectos");
+                        owl1.owlCarousel({
                             items : 4, //10 items above 1000px browser width
                             itemsDesktop : [1000,3], //5 items between 1000px and 901px
                             itemsDesktopSmall : [900,2], // 3 items betweem 900px and 601px
@@ -113,6 +114,8 @@ define(['app'], function (app) {
 //                            rewindSpeed: 11,
                             lazyEffect: false,
                             transitionStyle : false,
+//                            navigation : true,
+//                            navigationText : ["prev","next"],
 
                             pagination : false,
                             autoPlay : true,
@@ -120,6 +123,8 @@ define(['app'], function (app) {
                             autoHeight : true
 
                         });
+                        owl = $("#owl-proyectos").data('owlCarousel');
+                        
                     }, 1300);
         
                     
@@ -128,6 +133,13 @@ define(['app'], function (app) {
         };
 
         load();
+        $scope.prevProy = function() {
+            owl.prev()
+        }
+
+        $scope.nextProy = function() {
+            owl.next()
+        }
 
     }
 

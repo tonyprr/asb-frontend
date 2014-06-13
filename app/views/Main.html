@@ -48,6 +48,9 @@
     
 
     <div id="informacion-inicio">
+        <div>
+        <a class="prevProy hidden-xs" ng-click="prevProy()"></a>
+        <a class="nextProy hidden-xs" ng-click="nextProy()"></a>
         <div id="owl-proyectos" class="owl-carousel">
 
             <div ng-repeat="contenido in contenidos"
@@ -69,7 +72,7 @@
                     </div>
                 </div>
             </div>
-            
+        </div>
         </div>
         
         <div ng-include="'views/infoEmpresa.html'">
