@@ -2,7 +2,7 @@
 
 define(['app'], function (app) {
 
-    var contactoController = function ($scope, $location) {
+    var contactoController = function ($scope, $location, contactoService) {
         var appTitle = 'Contacto';
         $scope.appTitle = appTitle;
         $scope.highlight = function (path) {
@@ -143,9 +143,17 @@ define(['app'], function (app) {
 //google.maps.event.addDomListener(window, 'load', initialize);
         google.maps.event.addDomListener(window, 'resize', initialize);
 
+        $scope.enviarContacto = function () {
+            contactoService.enviarContacto(null, 2,
+                function(resp) {
+                    $scope.contenidos = resp.data;
+                }
+            );
+        }
+
         
     };
 
-    app.register.controller('ContactoController', ['$scope', '$location', contactoController]);
+    app.register.controller('ContactoController', ['$scope', '$location', 'contactoService', contactoController]);
     
 });
