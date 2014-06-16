@@ -144,12 +144,8 @@ define(['app'], function (app) {
         google.maps.event.addDomListener(window, 'resize', initialize);
 
         $scope.enviarContacto = function () {
-            contactoService.enviarContacto(null, 2,
-                function(resp) {
-                    $scope.contenidos = resp.data;
-                }
-            );
-        }
+            contactoService.enviarContacto($scope.contacto);
+        };
 
         
     };

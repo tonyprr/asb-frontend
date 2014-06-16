@@ -21,53 +21,63 @@
                         </p> 
                         <p>
                           <img data-ng-src="img/iconos/icono-telefono.png"  align="left"/>
-                          Tel - Fax 241-8724 / 241-8142 Atención de lunes a viernes de 9am a 6pm
+                          Tel - Fax 2418721,  2418724,  2418142 Atención de lunes a viernes de 9am a 6pm
                         </p> 
                         <p>
                           <img data-ng-src="img/iconos/icono-celular.png"  align="left"/>
-                          981-085-768 / 999-118-448 / 996-494-966 Atención de lunes a domingo en cualquier horario
+                          981-085-768, 994-669-685 Atención de lunes a domingo en cualquier horario
                           </p> 
                         <p>
                           <img data-ng-src="img/iconos/icono-correo.png"  align="left"/>
-                          gerencia@asbcontratistas.com
+                          gerencia@asbcontratistas.com &nbsp; silvia@asbcontratistas.com
                         </p> 
                     </div>
                     <div class="col-md-4">
 
-                        <form class="form-horizontal" role="form" ng-submit="enviarContacto()">
+                        <form class="form-horizontal" role="form" id="formContacto"
+                              name="contactoForm" ng-submit="enviarContacto()">
                           <div class="form-group">
-                            <label for="inputNombre" class="col-sm-3 control-label">Nombre:</label>
+                            <label for="inputNombre" class="col-sm-3 control-label">Nombre:*</label>
                             <div class="col-sm-9">
-                              <input type="text" class="form-control input-sm" id="inputNombre" placeholder="Nombre">
+                              <input type="text" class="form-control input-sm" id="inputNombre" placeholder="Nombre"
+                                     required ng-model="contacto.nombre">
                             </div>
                           </div>
                           <div class="form-group">
-                            <label for="inputEmail" class="col-sm-3 control-label">Email:</label>
+                            <label for="inputEmail" class="col-sm-3 control-label">Email:*</label>
                             <div class="col-sm-9">
-                              <input type="email" class="form-control input-sm" id="inputEmail" placeholder="Email">
+                              <input type="email" class="form-control input-sm" id="inputEmail" placeholder="Email"
+                                    required ng-model="contacto.email">
                             </div>
                           </div>
                           <div class="form-group">
                             <label for="inputEmpresa" class="col-sm-3 control-label">Empresa:</label>
                             <div class="col-sm-9">
-                              <input type="text" class="form-control input-sm" id="inputEmpresa" placeholder="Empresa">
+                              <input type="text" class="form-control input-sm" id="inputEmpresa" placeholder="Empresa"
+                                     ng-model="contacto.empresa">
                             </div>
                           </div>
                           <div class="form-group">
-                            <label for="inputTelefono" class="col-sm-3 control-label">Teléfono:</label>
+                            <label for="inputTelefono" class="col-sm-3 control-label">Teléfono:*</label>
                             <div class="col-sm-9">
-                              <input type="text" class="form-control input-sm" id="inputTelefono" placeholder="Teléfono">
+                              <input type="text" class="form-control input-sm" id="inputTelefono" placeholder="Teléfono"
+                                     required ng-model="contacto.telefono">
                             </div>
                           </div>
                           <div class="form-group">
-                            <label for="inputComentario" class="col-sm-3 control-label">Comentario:</label>
+                            <label for="inputComentario" class="col-sm-3 control-label">Comentario:*</label>
                             <div class="col-sm-9">
-                                <textarea class="form-control input-sm" id="inputComentario" rows="3"></textarea>
+                                <textarea class="form-control input-sm" id="inputComentario" rows="3"
+                                          required ng-model="contacto.comentario"></textarea>
                             </div>
                           </div>
                           <div class="form-group">
                               <div class="col-sm-offset-3 col-sm-9 text-right">
-                              <button type="submit" class="btn" style="width: 98px;border-radius: 0;background-color: black;color: white">Enviar</button>
+                              <button type="submit" class="btn" 
+                                      style="width: 98px;border-radius: 0;background-color: black;color: white"
+                                      ng-disabled="!contactoForm.$valid">
+                                  Enviar
+                              </button>
                             </div>
                           </div>
                         </form>

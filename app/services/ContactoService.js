@@ -2,40 +2,31 @@
 
 define(['app'], function (app) {
 
-    var contactoService = function ($http, $rootScope, $q, $timeout) {
-        var catecontactoFactory = {};
-        catecontactoFactory.getGaleriaById = function(idcont, tipo, success) {
-            $http.post($rootScope.appUrl + '/login', { 'usuariox' : usuario, 'clave': clave })
-                .success(function(data, status, headers, config) {
-                    return {data: data, headers: headers};
+    var contactoService = function ($http, $rootScope, $timeout) {
+        var contactoFactory = {};
+        contactoFactory.enviarContacto = function(contacto) {
+            console.log(contacto.nombre);
+            
+            $http.post($rootScope.appUrl + '/contacto', contacto)
+            .success(function(data, status, headers, config) {
+                if (data.success === 1) {
+                    $("#formContacto").html('<p class="bg-info">' + data.msg + '</p>');
+                } else {
+                    $rootScope.error = data.msg;
+                    $timeout(function() {
+                        $rootScope.error = null;
+                    }, 5000);
+                }
             }).error(function(err) {
                     $rootScope.error = "Error en la consulta.";
                     $timeout(function() {
                         $rootScope.error = null;
                     }, 4000);
             });
-
-            $http.get($rootScope.appUrl + '/contacto', {params: {operacion: 'getGaleriaById', idcont: idcont, idtipo: tipo}}).success(function(data) {
-                if (data.success == 0) {
-                    $rootScope.error = data.msg;
-                    $timeout(function() {
-                        $rootScope.error = null;
-                    }, 5000);
-                }
-                success(data);
-            }).error(function(err) {
-                    $rootScope.error = "Error en la consulta.";
-                    $timeout(function() {
-                        $rootScope.error = null;
-                    }, 4000);
-                });
         };
-        
-        
-        return catecontactoFactory;
-        
+        return contactoFactory;
     };
 
-    app.factory('contactoService', ['$http', '$rootScope', '$q', '$timeout', contactoService]);
+    app.factory('contactoService', ['$http', '$rootScope', '$timeout', contactoService]);
 
 });

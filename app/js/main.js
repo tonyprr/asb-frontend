@@ -19,6 +19,7 @@ require(
         'services/authService',
 //        'services/dataService',
         'services/userService',
+        'services/ContactoService',
         'directives/accessLevel',
         'directives/fbLike',
         'directives/fallbackSrc',
