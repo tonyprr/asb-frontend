@@ -3,7 +3,7 @@
 define(['app'], function (app) {
 
     var proyectoDetalleController = function ($scope, $rootScope, $stateParams, $sce, $http, $location,
-                                contenidoService) {
+                                $timeout, contenidoService) {
         var appTitle = 'Detalle del Proyecto';
         $scope.appTitle = appTitle;
         $scope.contenido = {};
@@ -60,6 +60,28 @@ define(['app'], function (app) {
              contenidoService.getById($stateParams.idcont,
                  function(resp) {
                     $scope.contenido = resp.data;
+
+                    jQuery(function() {
+                        $timeout( function() {
+                            $('.imgPrinProy').magnificPopup({
+                                delegate: 'a', // child items selector, by clicking on it popup will open
+                                type: 'image',
+                                tLoading: 'Cargando imagen #%curr%...',
+                                closeOnContentClick: true,
+                                closeBtnInside: false,
+                                fixedContentPos: true,
+                                mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+                                image: {
+                                    verticalFit: true
+                                },
+                                zoom: {
+                                    enabled: true,
+                                    duration: 300 // don't foget to change the duration also in CSS
+                                }
+                            });
+                        }, 2000);
+                    });
+
                 }
              );
      
@@ -71,6 +93,6 @@ define(['app'], function (app) {
     };
 
     app.register.controller('ProyectoDetalleController', ['$scope', '$rootScope', '$stateParams', '$sce', '$http', '$location',
-        'contenidoService', proyectoDetalleController]);
+        '$timeout', 'contenidoService', proyectoDetalleController]);
     
 });
