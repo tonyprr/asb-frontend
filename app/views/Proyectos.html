@@ -11,9 +11,6 @@
 <div id="informacion-proyectos" class="">
 	<h2 class="titulo"> PROYECTOS </h2>
         <ul class="nav nav-pills" ng-init="activo = false">
-          <li ng-class="{'active' : cateSelec.idcontcate === ''}">
-              <a href="" ng-click="selectCategoria('')">TODOS</a>
-          </li>
           <li ng-repeat="categoria in categorias"
               ng-class="{'active' : cateSelec.idcontcate === categoria.idcontcate}">
               <a href="" ng-click="selectCategoria(categoria)">

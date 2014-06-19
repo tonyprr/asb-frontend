@@ -45,6 +45,7 @@ define(['app'], function (app) {
              categoriaContenidoService.listaCategorias(5,
                  function(resp) {
                      $scope.categorias = resp.data;
+                     $scope.selectCategoria($scope.categorias[0]);
                  }
               );
              contenidoService.listaContenidos(null, 2,
