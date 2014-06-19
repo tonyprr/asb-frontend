@@ -168,7 +168,7 @@ nav{display:none !important}
 .content .contenido #titulo-home div h2{font-size:2.8em;margin:.4em auto .1em .1em}
 .content #informacion-inicio{top:-15em;}
 .content #informacion-inicio #owl-proyectos{margin-bottom:2.7em;font-size:1.3em;padding-right:.9em;padding-left:1.5em;}
-.content #informacion-inicio #owl-proyectos .item .row .imagen-thumb img,.content #informacion-inicio #owl-proyectos .item .row .imagen-thumb .etiqueta{width:125px}
+.content #informacion-inicio #owl-proyectos .item .row .imagen-thumb img,.content #informacion-inicio #owl-proyectos .item .row .imagen-thumb .etiqueta{width:125px;font-size:.8em !important}
 .content #informacion-inicio #owl-proyectos .item .row .proy-descrip-thumb{font-size:.9em}
 .content #informacion-empresa{top:-25em;}
 .content #informacion-empresa p{font-size:1.3em}
