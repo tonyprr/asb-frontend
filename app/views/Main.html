@@ -58,6 +58,10 @@
                 <div class="row">
                     <div class="col-xs-5 col-md-5 col-sm-5 imagen-thumb">
                         <a ui-sref="public.proyecto_detalle({ idcont: contenido.idcontent })">
+
+                            <img id="banda-vendido" ng-src="img/100vendido.png" ng-show="contenido.idcontcate == 13"
+                                class="img-responsive"/>
+
                             <img fallback-src="img/sin-imagen.png" 
                                 ng-src="{{rootUrl}}/backend/web/m_web/files/content/{{contenido.imagen}}" class="img-responsive"/>
                         </a>
