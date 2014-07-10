@@ -141,6 +141,20 @@ define(['app'], function (app) {
             owl.next()
         }
 
+    jQuery(function() {
+        $timeout( function() {
+		$.magnificPopup.open({
+		    items: {
+		        src: 'img/popup.jpg'
+		    },
+		    type: 'image'
+
+		  // You may add options here, they're exactly the same as for $.fn.magnificPopup call
+		  // Note that some settings that rely on click event (like disableOn or midClick) will not work here
+		}, 0);
+        }, 500);
+    });
+
     }
 
     app.register.controller('MainController', ['$scope', '$location', '$timeout', 'contenidoService', mainController]);

@@ -119,3 +119,25 @@ html {
   top: 10%;
   z-index: 9000;
 }
+
+.buttonFlotante {
+	font-size: 11px;
+	position: fixed;
+	padding: 5px;
+	z-index: 5000;
+	width: 72px;
+	height: 33px;
+	line-height: 20px;
+	overflow: hidden;
+	cursor: pointer;
+	direction: ltr;
+	right: -5px;
+	top: 50%;
+	margin-top: -57px;
+	background-color: white;
+	border: 1px solid grey;
+	background-attachment: scroll;
+	background-position: 0px -50px;
+	background-repeat: no-repeat;
+}
+

@@ -45,8 +45,12 @@ define(['app'], function (app) {
         //console.log($location.path());
         //$scope.isActiveMenu($location.path());
         
-        
+	$(document).ready(function() {
+	  $('.popup-link').magnificPopup({type:'image'});
+	});
+
         $rootScope.appUrl = "/asb-backend/web/api";
+        $rootScope.rootUrl = "";
     };
 
     app.controller('InitController', ['$scope', '$rootScope', '$http', '$location', 'Auth', initController]);
