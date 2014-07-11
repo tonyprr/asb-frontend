@@ -13,16 +13,22 @@
         <h2 class="titulo hidden-xs" ng-bind="contenido.adicional1" style="width: 55%;">  </h2>
         <h2 class="titulo visible-xs" ng-bind="contenido.adicional1">  </h2>
         
-        <div class="text-center"
-            ng-show="contenido.contcate.idcontcate == 13">
-            <div class="imgPrinProy text-center" >
-                <a href="{{rootUrl}}/backend/web/m_web/files/content/{{contenido.adjunto}}" 
-                    class="text-center">
-                    <img fallback-src="img/sin-imagen.png" 
-                        ng-src="{{rootUrl}}/backend/web/m_web/files/content/{{contenido.adjunto}}" width="240" />
-                </a>
+        <div ng-show="contenido.contcate.idcontcate == 13">
+            
+            <div class="row">
+                
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" ng-bind-html="deliberatelyTrustDangerousSnippet(contenido.adicional8)">
+                    
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 imgPrinProy text-center" >
+                    <a href="{{rootUrl}}/backend/web/m_web/files/content/{{contenido.adjunto}}" 
+                        class="text-center">
+                        <img fallback-src="img/sin-imagen.png" 
+                             ng-src="{{rootUrl}}/backend/web/m_web/files/content/{{contenido.adjunto}}" class="img-responsive" />
+                    </a>
 
-            </div>   
+                </div>   
+            </div>
         </div>
 
         <ul class="nav nav-pills" ng-init="tabActivo = 1" 
